@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import {Layout } from "@/components/layout";
+import {AppWrapper} from "@/context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,13 +16,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
-    <html lang="en">
+    <AppWrapper>
+    <html lang
+    ="en">
       <body className="h-screen w-screen overflow-hidden flex flex-col">
-        <Layout />
-        <main className="flex-1 overflow-auto bg-slate-100">{children}</main>
+          <Layout />
+          <main className="flex-grow flex flex-col">{children}</main>
       </body>
     </html>
+    </AppWrapper>
   );
 }
