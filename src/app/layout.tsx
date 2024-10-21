@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
-import {Layout } from "@/components/layout";
-import {AppWrapper} from "@/context";
+import { Layout } from "@/components/layout";
+import { AppWrapper } from "@/context";
+import { StoreWrapper } from "@/context/store";
+import { ConfigProvider } from "antd";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,15 +18,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <AppWrapper>
-    <html lang
-    ="en">
-      <body className="h-screen w-screen overflow-hidden flex flex-col">
-          <Layout />
-          <main className="flex-grow flex flex-col">{children}</main>
-      </body>
-    </html>
+      <StoreWrapper>
+      <ConfigProvider
+            theme={{
+              components: {
+                Button: {
+                  colorPrimary: "#5800cc",
+                  algorithm: true, // Enable algorithm
+                },
+              },
+            }}
+          >
+        <html lang="en">
+          <body className="h-screen w-screen overflow-hidden flex flex-col">
+            <main className="flex-grow flex flex-col">
+              <Layout />
+              {children}
+            </main>
+          </body>
+        </html>
+      </ConfigProvider>
+      </StoreWrapper>
     </AppWrapper>
   );
 }

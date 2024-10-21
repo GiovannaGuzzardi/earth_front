@@ -1,7 +1,7 @@
-export default function contato() {
+export default function cadastro() {
   return (
     <main className="flex-1 overflow-auto">
-      <div>pagina</div>
+      <div>cadastro</div>
     </main>
   );
 }

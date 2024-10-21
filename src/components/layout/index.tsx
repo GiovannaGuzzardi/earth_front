@@ -5,35 +5,33 @@ import logo_text from "../../../public/img/logo_text.svg";
 import Image from "next/image";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useAppContext } from "@/context";
-import { log } from "console";
 import { useRouter } from "next/navigation";
 
 export function Layout() {
-  const [selected, setSelected] = useState(true);
-  const [options, setOptions] = useState([
-    { name: "", link: "/" },
-  ]);
+  const [options, setOptions] = useState([{ name: "", link: "/" }]);
   const router = useRouter();
-  const {login, setLogin} = useAppContext();
+  const { token, logout } = useAppContext();
 
   useEffect(() => {
-    if (login) {
+    console.log(token);
+    if (token) {
       setOptions([
         { name: "Página Inicial", link: "/" },
-        { name: "Vender", link: "/sobre" },
-        { name: "Resgatar", link: "/contato" },
+        { name: "Vender", link: "/vender" },
+        { name: "Resgatar", link: "/resgatar" },
       ]);
     } else {
       setOptions([
         { name: "Página Inicial", link: "/" },
         { name: "Entrar", link: "/login" },
+        { name: "Cadastrar", link: "/cadastro" },
       ]);
     }
-  }, [login]);
+  }, [token]);
 
   const handleClick = () => {
-    setLogin(false); // Atualiza o estado
-    router.push('/login'); // Redireciona para a página desejada
+    logout();
+    router.push("/login"); // Redireciona para a página desejada
   };
 
   return (
@@ -57,7 +55,7 @@ export function Layout() {
               </a>
             </div>
           ))}
-          {login && (
+          {token && (
             <div className="mr-6">
               <button
                 className="font-bold text-xl text-slate-50  hover:text-slate-300"
