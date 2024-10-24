@@ -8,18 +8,20 @@ import { useAppContext } from "@/context";
 import { useRouter } from "next/navigation";
 
 export function Layout() {
-  const [options, setOptions] = useState([{ name: "", link: "/" }]);
+  const base = [
+    { name: "Página Inicial", link: "/" },
+    { name: "Vender", link: "/vender" },
+    { name: "Resgatar", link: "/resgatar" },
+  ];
+
+  const [options, setOptions] = useState(base);
   const router = useRouter();
   const { token, logout } = useAppContext();
 
   useEffect(() => {
     console.log(token);
     if (token) {
-      setOptions([
-        { name: "Página Inicial", link: "/" },
-        { name: "Vender", link: "/vender" },
-        { name: "Resgatar", link: "/resgatar" },
-      ]);
+      setOptions(base);
     } else {
       setOptions([
         { name: "Página Inicial", link: "/" },
