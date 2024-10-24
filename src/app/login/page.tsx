@@ -44,14 +44,16 @@ export default function login() {
       <div className="flex flex-col flex-grow justify-between bg-slate-50 mr-2- p-[2.5rem] rounded-md items-center max-w-[25rem] self-center w-2/5 mr-[2rem]">
         <button
           // onClick={signInWithGoogle}
-          className="bg-blue-700 text-white font-bold ease-in hover:bg-blue-800 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full"
+          disabled={true}
+          className="bg-blue-700 text-white font-bold ease-in hover:bg-blue-800 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full disabled:opacity-50  disabled:hover:bg-blue-700"
         >
           <GoogleLogo size={24} color="#ffffff" weight="fill" />
           <h3 className="ml-[1rem]">Entrar com o google</h3>
         </button>
         <button
           // onClick={signInWithFacebook}
-          className="bg-blue-500 text-white font-bold ease-in hover:bg-blue-600 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full"
+          disabled={true}
+          className="bg-blue-500 text-white font-bold ease-in hover:bg-blue-600 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full disabled:opacity-50  disabled:hover:bg-blue-500"
         >
           <FacebookLogo size={24} color="#ffffff" weight="fill" />
           <h3 className="ml-[1rem]">Entrar com o facebook</h3>
@@ -99,13 +101,15 @@ export default function login() {
         <div className="flex flex-col my-2">
           <Link
             href=""
-            className=" text-center text-black hover:text-primary-400"
+            disabled={true}
+            className=" text-center text-black hover:text-primary-400 disabled:opacity-50 disabled:hover:text-black"
           >
             Esqueceu sua senha?
           </Link>
           <Link
             href=""
-            className=" text-center text-black hover:text-primary-400 "
+            disabled={true}
+            className=" text-center text-black hover:text-primary-400 disabled:opacity-50 disabled:hover:text-black"
           >
             Ainda não é cadastrado? realize seu registro
           </Link>
