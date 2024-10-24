@@ -52,1287 +52,1287 @@ export const Brasil = ({ width, height }: BrasilProps) => {
         >
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.39978%, 73.298645%, 18.399048%)"
+            stopColor="rgb(0.39978%, 73.298645%, 18.399048%)"
             offset="0"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.398254%, 73.251343%, 18.713379%)"
+            stopColor="rgb(0.398254%, 73.251343%, 18.713379%)"
             offset="0.00390625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.396729%, 73.205566%, 19.029236%)"
+            stopColor="rgb(0.396729%, 73.205566%, 19.029236%)"
             offset="0.0078125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.395203%, 73.158264%, 19.343567%)"
+            stopColor="rgb(0.395203%, 73.158264%, 19.343567%)"
             offset="0.0117188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.393677%, 73.112488%, 19.657898%)"
+            stopColor="rgb(0.393677%, 73.112488%, 19.657898%)"
             offset="0.015625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.392151%, 73.065186%, 19.972229%)"
+            stopColor="rgb(0.392151%, 73.065186%, 19.972229%)"
             offset="0.0195312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.390625%, 73.019409%, 20.288086%)"
+            stopColor="rgb(0.390625%, 73.019409%, 20.288086%)"
             offset="0.0234375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.389099%, 72.972107%, 20.602417%)"
+            stopColor="rgb(0.389099%, 72.972107%, 20.602417%)"
             offset="0.0273438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.387573%, 72.926331%, 20.918274%)"
+            stopColor="rgb(0.387573%, 72.926331%, 20.918274%)"
             offset="0.03125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.386047%, 72.879028%, 21.232605%)"
+            stopColor="rgb(0.386047%, 72.879028%, 21.232605%)"
             offset="0.0351562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.384521%, 72.831726%, 21.546936%)"
+            stopColor="rgb(0.384521%, 72.831726%, 21.546936%)"
             offset="0.0390625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.382996%, 72.784424%, 21.861267%)"
+            stopColor="rgb(0.382996%, 72.784424%, 21.861267%)"
             offset="0.0429688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.38147%, 72.738647%, 22.177124%)"
+            stopColor="rgb(0.38147%, 72.738647%, 22.177124%)"
             offset="0.046875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.378418%, 72.691345%, 22.491455%)"
+            stopColor="rgb(0.378418%, 72.691345%, 22.491455%)"
             offset="0.0507812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.376892%, 72.645569%, 22.807312%)"
+            stopColor="rgb(0.376892%, 72.645569%, 22.807312%)"
             offset="0.0546875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.375366%, 72.598267%, 23.121643%)"
+            stopColor="rgb(0.375366%, 72.598267%, 23.121643%)"
             offset="0.0585938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.37384%, 72.55249%, 23.435974%)"
+            stopColor="rgb(0.37384%, 72.55249%, 23.435974%)"
             offset="0.0625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.372314%, 72.505188%, 23.750305%)"
+            stopColor="rgb(0.372314%, 72.505188%, 23.750305%)"
             offset="0.0664062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.370789%, 72.459412%, 24.066162%)"
+            stopColor="rgb(0.370789%, 72.459412%, 24.066162%)"
             offset="0.0703125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.369263%, 72.412109%, 24.380493%)"
+            stopColor="rgb(0.369263%, 72.412109%, 24.380493%)"
             offset="0.0742188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.367737%, 72.364807%, 24.69635%)"
+            stopColor="rgb(0.367737%, 72.364807%, 24.69635%)"
             offset="0.078125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.366211%, 72.317505%, 25.010681%)"
+            stopColor="rgb(0.366211%, 72.317505%, 25.010681%)"
             offset="0.0820312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.364685%, 72.271729%, 25.325012%)"
+            stopColor="rgb(0.364685%, 72.271729%, 25.325012%)"
             offset="0.0859375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.363159%, 72.224426%, 25.639343%)"
+            stopColor="rgb(0.363159%, 72.224426%, 25.639343%)"
             offset="0.0898438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.361633%, 72.17865%, 25.9552%)"
+            stopColor="rgb(0.361633%, 72.17865%, 25.9552%)"
             offset="0.09375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.360107%, 72.131348%, 26.269531%)"
+            stopColor="rgb(0.360107%, 72.131348%, 26.269531%)"
             offset="0.0976562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.358582%, 72.085571%, 26.585388%)"
+            stopColor="rgb(0.358582%, 72.085571%, 26.585388%)"
             offset="0.101562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.357056%, 72.038269%, 26.899719%)"
+            stopColor="rgb(0.357056%, 72.038269%, 26.899719%)"
             offset="0.105469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.35553%, 71.992493%, 27.215576%)"
+            stopColor="rgb(0.35553%, 71.992493%, 27.215576%)"
             offset="0.109375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.354004%, 71.94519%, 27.529907%)"
+            stopColor="rgb(0.354004%, 71.94519%, 27.529907%)"
             offset="0.113281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.352478%, 71.899414%, 27.844238%)"
+            stopColor="rgb(0.352478%, 71.899414%, 27.844238%)"
             offset="0.117188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.350952%, 71.852112%, 28.158569%)"
+            stopColor="rgb(0.350952%, 71.852112%, 28.158569%)"
             offset="0.121094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.349426%, 71.80481%, 28.474426%)"
+            stopColor="rgb(0.349426%, 71.80481%, 28.474426%)"
             offset="0.125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.3479%, 71.757507%, 28.788757%)"
+            stopColor="rgb(0.3479%, 71.757507%, 28.788757%)"
             offset="0.128906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.346375%, 71.711731%, 29.104614%)"
+            stopColor="rgb(0.346375%, 71.711731%, 29.104614%)"
             offset="0.132812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.344849%, 71.664429%, 29.418945%)"
+            stopColor="rgb(0.344849%, 71.664429%, 29.418945%)"
             offset="0.136719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.343323%, 71.618652%, 29.733276%)"
+            stopColor="rgb(0.343323%, 71.618652%, 29.733276%)"
             offset="0.140625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.341797%, 71.57135%, 30.047607%)"
+            stopColor="rgb(0.341797%, 71.57135%, 30.047607%)"
             offset="0.144531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.340271%, 71.525574%, 30.363464%)"
+            stopColor="rgb(0.340271%, 71.525574%, 30.363464%)"
             offset="0.148437"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.338745%, 71.478271%, 30.677795%)"
+            stopColor="rgb(0.338745%, 71.478271%, 30.677795%)"
             offset="0.152344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.337219%, 71.432495%, 30.993652%)"
+            stopColor="rgb(0.337219%, 71.432495%, 30.993652%)"
             offset="0.15625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.335693%, 71.385193%, 31.307983%)"
+            stopColor="rgb(0.335693%, 71.385193%, 31.307983%)"
             offset="0.160156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.334167%, 71.337891%, 31.622314%)"
+            stopColor="rgb(0.334167%, 71.337891%, 31.622314%)"
             offset="0.164062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.332642%, 71.290588%, 31.936646%)"
+            stopColor="rgb(0.332642%, 71.290588%, 31.936646%)"
             offset="0.167969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.331116%, 71.244812%, 32.252502%)"
+            stopColor="rgb(0.331116%, 71.244812%, 32.252502%)"
             offset="0.171875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.32959%, 71.19751%, 32.566833%)"
+            stopColor="rgb(0.32959%, 71.19751%, 32.566833%)"
             offset="0.175781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.328064%, 71.151733%, 32.88269%)"
+            stopColor="rgb(0.328064%, 71.151733%, 32.88269%)"
             offset="0.179687"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.326538%, 71.104431%, 33.197021%)"
+            stopColor="rgb(0.326538%, 71.104431%, 33.197021%)"
             offset="0.183594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.325012%, 71.058655%, 33.511353%)"
+            stopColor="rgb(0.325012%, 71.058655%, 33.511353%)"
             offset="0.1875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.323486%, 71.011353%, 33.825684%)"
+            stopColor="rgb(0.323486%, 71.011353%, 33.825684%)"
             offset="0.191406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.32196%, 70.965576%, 34.141541%)"
+            stopColor="rgb(0.32196%, 70.965576%, 34.141541%)"
             offset="0.195312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.320435%, 70.918274%, 34.455872%)"
+            stopColor="rgb(0.320435%, 70.918274%, 34.455872%)"
             offset="0.199219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.318909%, 70.870972%, 34.771729%)"
+            stopColor="rgb(0.318909%, 70.870972%, 34.771729%)"
             offset="0.203125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.317383%, 70.823669%, 35.08606%)"
+            stopColor="rgb(0.317383%, 70.823669%, 35.08606%)"
             offset="0.207031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.315857%, 70.777893%, 35.400391%)"
+            stopColor="rgb(0.315857%, 70.777893%, 35.400391%)"
             offset="0.210937"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.314331%, 70.730591%, 35.714722%)"
+            stopColor="rgb(0.314331%, 70.730591%, 35.714722%)"
             offset="0.214844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.312805%, 70.684814%, 36.030579%)"
+            stopColor="rgb(0.312805%, 70.684814%, 36.030579%)"
             offset="0.21875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.311279%, 70.637512%, 36.34491%)"
+            stopColor="rgb(0.311279%, 70.637512%, 36.34491%)"
             offset="0.222656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.309753%, 70.591736%, 36.660767%)"
+            stopColor="rgb(0.309753%, 70.591736%, 36.660767%)"
             offset="0.226562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.308228%, 70.544434%, 36.975098%)"
+            stopColor="rgb(0.308228%, 70.544434%, 36.975098%)"
             offset="0.230469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.306702%, 70.498657%, 37.289429%)"
+            stopColor="rgb(0.306702%, 70.498657%, 37.289429%)"
             offset="0.234375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.305176%, 70.451355%, 37.60376%)"
+            stopColor="rgb(0.305176%, 70.451355%, 37.60376%)"
             offset="0.238281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.30365%, 70.404053%, 37.919617%)"
+            stopColor="rgb(0.30365%, 70.404053%, 37.919617%)"
             offset="0.242187"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.302124%, 70.35675%, 38.233948%)"
+            stopColor="rgb(0.302124%, 70.35675%, 38.233948%)"
             offset="0.246094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.300598%, 70.310974%, 38.549805%)"
+            stopColor="rgb(0.300598%, 70.310974%, 38.549805%)"
             offset="0.25"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.299072%, 70.263672%, 38.864136%)"
+            stopColor="rgb(0.299072%, 70.263672%, 38.864136%)"
             offset="0.253906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.297546%, 70.217896%, 39.178467%)"
+            stopColor="rgb(0.297546%, 70.217896%, 39.178467%)"
             offset="0.257812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.296021%, 70.170593%, 39.492798%)"
+            stopColor="rgb(0.296021%, 70.170593%, 39.492798%)"
             offset="0.261719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.294495%, 70.124817%, 39.808655%)"
+            stopColor="rgb(0.294495%, 70.124817%, 39.808655%)"
             offset="0.265625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.292969%, 70.077515%, 40.122986%)"
+            stopColor="rgb(0.292969%, 70.077515%, 40.122986%)"
             offset="0.269531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.291443%, 70.031738%, 40.438843%)"
+            stopColor="rgb(0.291443%, 70.031738%, 40.438843%)"
             offset="0.273438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.289917%, 69.984436%, 40.753174%)"
+            stopColor="rgb(0.289917%, 69.984436%, 40.753174%)"
             offset="0.277344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.288391%, 69.937134%, 41.067505%)"
+            stopColor="rgb(0.288391%, 69.937134%, 41.067505%)"
             offset="0.28125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.286865%, 69.889832%, 41.381836%)"
+            stopColor="rgb(0.286865%, 69.889832%, 41.381836%)"
             offset="0.285156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.285339%, 69.844055%, 41.697693%)"
+            stopColor="rgb(0.285339%, 69.844055%, 41.697693%)"
             offset="0.289062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.283813%, 69.796753%, 42.012024%)"
+            stopColor="rgb(0.283813%, 69.796753%, 42.012024%)"
             offset="0.292969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.282288%, 69.750977%, 42.327881%)"
+            stopColor="rgb(0.282288%, 69.750977%, 42.327881%)"
             offset="0.296875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.280762%, 69.703674%, 42.642212%)"
+            stopColor="rgb(0.280762%, 69.703674%, 42.642212%)"
             offset="0.300781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.279236%, 69.657898%, 42.956543%)"
+            stopColor="rgb(0.279236%, 69.657898%, 42.956543%)"
             offset="0.304688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.27771%, 69.610596%, 43.270874%)"
+            stopColor="rgb(0.27771%, 69.610596%, 43.270874%)"
             offset="0.308594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.276184%, 69.564819%, 43.586731%)"
+            stopColor="rgb(0.276184%, 69.564819%, 43.586731%)"
             offset="0.3125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.274658%, 69.517517%, 43.901062%)"
+            stopColor="rgb(0.274658%, 69.517517%, 43.901062%)"
             offset="0.316406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.273132%, 69.470215%, 44.216919%)"
+            stopColor="rgb(0.273132%, 69.470215%, 44.216919%)"
             offset="0.320312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.271606%, 69.422913%, 44.53125%)"
+            stopColor="rgb(0.271606%, 69.422913%, 44.53125%)"
             offset="0.324219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.270081%, 69.377136%, 44.845581%)"
+            stopColor="rgb(0.270081%, 69.377136%, 44.845581%)"
             offset="0.328125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.268555%, 69.329834%, 45.159912%)"
+            stopColor="rgb(0.268555%, 69.329834%, 45.159912%)"
             offset="0.332031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.267029%, 69.284058%, 45.475769%)"
+            stopColor="rgb(0.267029%, 69.284058%, 45.475769%)"
             offset="0.335938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.265503%, 69.236755%, 45.7901%)"
+            stopColor="rgb(0.265503%, 69.236755%, 45.7901%)"
             offset="0.339844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.263977%, 69.190979%, 46.105957%)"
+            stopColor="rgb(0.263977%, 69.190979%, 46.105957%)"
             offset="0.34375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.262451%, 69.143677%, 46.420288%)"
+            stopColor="rgb(0.262451%, 69.143677%, 46.420288%)"
             offset="0.347656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.260925%, 69.0979%, 46.734619%)"
+            stopColor="rgb(0.260925%, 69.0979%, 46.734619%)"
             offset="0.351562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.259399%, 69.050598%, 47.04895%)"
+            stopColor="rgb(0.259399%, 69.050598%, 47.04895%)"
             offset="0.355469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.257874%, 69.004822%, 47.364807%)"
+            stopColor="rgb(0.257874%, 69.004822%, 47.364807%)"
             offset="0.359375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.256348%, 68.95752%, 47.679138%)"
+            stopColor="rgb(0.256348%, 68.95752%, 47.679138%)"
             offset="0.363281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.254822%, 68.910217%, 47.994995%)"
+            stopColor="rgb(0.254822%, 68.910217%, 47.994995%)"
             offset="0.367188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.253296%, 68.862915%, 48.309326%)"
+            stopColor="rgb(0.253296%, 68.862915%, 48.309326%)"
             offset="0.371094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.25177%, 68.817139%, 48.623657%)"
+            stopColor="rgb(0.25177%, 68.817139%, 48.623657%)"
             offset="0.375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.250244%, 68.769836%, 48.937988%)"
+            stopColor="rgb(0.250244%, 68.769836%, 48.937988%)"
             offset="0.378906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.248718%, 68.72406%, 49.253845%)"
+            stopColor="rgb(0.248718%, 68.72406%, 49.253845%)"
             offset="0.382813"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.245667%, 68.676758%, 49.568176%)"
+            stopColor="rgb(0.245667%, 68.676758%, 49.568176%)"
             offset="0.386719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.244141%, 68.630981%, 49.884033%)"
+            stopColor="rgb(0.244141%, 68.630981%, 49.884033%)"
             offset="0.390625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.242615%, 68.583679%, 50.198364%)"
+            stopColor="rgb(0.242615%, 68.583679%, 50.198364%)"
             offset="0.394531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.241089%, 68.537903%, 50.512695%)"
+            stopColor="rgb(0.241089%, 68.537903%, 50.512695%)"
             offset="0.398438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.239563%, 68.490601%, 50.827026%)"
+            stopColor="rgb(0.239563%, 68.490601%, 50.827026%)"
             offset="0.402344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.238037%, 68.443298%, 51.142883%)"
+            stopColor="rgb(0.238037%, 68.443298%, 51.142883%)"
             offset="0.40625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.236511%, 68.395996%, 51.457214%)"
+            stopColor="rgb(0.236511%, 68.395996%, 51.457214%)"
             offset="0.410156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.234985%, 68.35022%, 51.773071%)"
+            stopColor="rgb(0.234985%, 68.35022%, 51.773071%)"
             offset="0.414062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.233459%, 68.302917%, 52.087402%)"
+            stopColor="rgb(0.233459%, 68.302917%, 52.087402%)"
             offset="0.417969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.231934%, 68.257141%, 52.401733%)"
+            stopColor="rgb(0.231934%, 68.257141%, 52.401733%)"
             offset="0.421875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.230408%, 68.209839%, 52.716064%)"
+            stopColor="rgb(0.230408%, 68.209839%, 52.716064%)"
             offset="0.425781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.228882%, 68.164062%, 53.031921%)"
+            stopColor="rgb(0.228882%, 68.164062%, 53.031921%)"
             offset="0.429688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.227356%, 68.11676%, 53.346252%)"
+            stopColor="rgb(0.227356%, 68.11676%, 53.346252%)"
             offset="0.433594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.22583%, 68.070984%, 53.662109%)"
+            stopColor="rgb(0.22583%, 68.070984%, 53.662109%)"
             offset="0.4375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.224304%, 68.023682%, 53.97644%)"
+            stopColor="rgb(0.224304%, 68.023682%, 53.97644%)"
             offset="0.441406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.222778%, 67.976379%, 54.290771%)"
+            stopColor="rgb(0.222778%, 67.976379%, 54.290771%)"
             offset="0.445313"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.221252%, 67.929077%, 54.605103%)"
+            stopColor="rgb(0.221252%, 67.929077%, 54.605103%)"
             offset="0.449219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.219727%, 67.883301%, 54.920959%)"
+            stopColor="rgb(0.219727%, 67.883301%, 54.920959%)"
             offset="0.453125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.218201%, 67.835999%, 55.235291%)"
+            stopColor="rgb(0.218201%, 67.835999%, 55.235291%)"
             offset="0.457031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.216675%, 67.790222%, 55.551147%)"
+            stopColor="rgb(0.216675%, 67.790222%, 55.551147%)"
             offset="0.460938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.215149%, 67.74292%, 55.865479%)"
+            stopColor="rgb(0.215149%, 67.74292%, 55.865479%)"
             offset="0.464844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.213623%, 67.697144%, 56.17981%)"
+            stopColor="rgb(0.213623%, 67.697144%, 56.17981%)"
             offset="0.46875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.212097%, 67.649841%, 56.494141%)"
+            stopColor="rgb(0.212097%, 67.649841%, 56.494141%)"
             offset="0.472656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.210571%, 67.604065%, 56.809998%)"
+            stopColor="rgb(0.210571%, 67.604065%, 56.809998%)"
             offset="0.476562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.209045%, 67.556763%, 57.124329%)"
+            stopColor="rgb(0.209045%, 67.556763%, 57.124329%)"
             offset="0.480469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.20752%, 67.50946%, 57.440186%)"
+            stopColor="rgb(0.20752%, 67.50946%, 57.440186%)"
             offset="0.484375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.205994%, 67.462158%, 57.754517%)"
+            stopColor="rgb(0.205994%, 67.462158%, 57.754517%)"
             offset="0.488281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.204468%, 67.416382%, 58.068848%)"
+            stopColor="rgb(0.204468%, 67.416382%, 58.068848%)"
             offset="0.492188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.202942%, 67.36908%, 58.383179%)"
+            stopColor="rgb(0.202942%, 67.36908%, 58.383179%)"
             offset="0.496094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.201416%, 67.323303%, 58.699036%)"
+            stopColor="rgb(0.201416%, 67.323303%, 58.699036%)"
             offset="0.5"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.19989%, 67.276001%, 59.013367%)"
+            stopColor="rgb(0.19989%, 67.276001%, 59.013367%)"
             offset="0.503906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.198364%, 67.230225%, 59.329224%)"
+            stopColor="rgb(0.198364%, 67.230225%, 59.329224%)"
             offset="0.507812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.196838%, 67.182922%, 59.643555%)"
+            stopColor="rgb(0.196838%, 67.182922%, 59.643555%)"
             offset="0.511719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.195312%, 67.137146%, 59.957886%)"
+            stopColor="rgb(0.195312%, 67.137146%, 59.957886%)"
             offset="0.515625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.193787%, 67.089844%, 60.272217%)"
+            stopColor="rgb(0.193787%, 67.089844%, 60.272217%)"
             offset="0.519531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.192261%, 67.042542%, 60.588074%)"
+            stopColor="rgb(0.192261%, 67.042542%, 60.588074%)"
             offset="0.523438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.190735%, 66.995239%, 60.902405%)"
+            stopColor="rgb(0.190735%, 66.995239%, 60.902405%)"
             offset="0.527344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.189209%, 66.949463%, 61.218262%)"
+            stopColor="rgb(0.189209%, 66.949463%, 61.218262%)"
             offset="0.53125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.187683%, 66.902161%, 61.532593%)"
+            stopColor="rgb(0.187683%, 66.902161%, 61.532593%)"
             offset="0.535156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.186157%, 66.856384%, 61.846924%)"
+            stopColor="rgb(0.186157%, 66.856384%, 61.846924%)"
             offset="0.539062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.184631%, 66.809082%, 62.161255%)"
+            stopColor="rgb(0.184631%, 66.809082%, 62.161255%)"
             offset="0.542969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.183105%, 66.763306%, 62.477112%)"
+            stopColor="rgb(0.183105%, 66.763306%, 62.477112%)"
             offset="0.546875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.18158%, 66.716003%, 62.791443%)"
+            stopColor="rgb(0.18158%, 66.716003%, 62.791443%)"
             offset="0.550781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.180054%, 66.670227%, 63.1073%)"
+            stopColor="rgb(0.180054%, 66.670227%, 63.1073%)"
             offset="0.554688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.178528%, 66.622925%, 63.421631%)"
+            stopColor="rgb(0.178528%, 66.622925%, 63.421631%)"
             offset="0.558594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.177002%, 66.577148%, 63.735962%)"
+            stopColor="rgb(0.177002%, 66.577148%, 63.735962%)"
             offset="0.5625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.175476%, 66.529846%, 64.050293%)"
+            stopColor="rgb(0.175476%, 66.529846%, 64.050293%)"
             offset="0.566406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.17395%, 66.482544%, 64.36615%)"
+            stopColor="rgb(0.17395%, 66.482544%, 64.36615%)"
             offset="0.570312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.172424%, 66.435242%, 64.680481%)"
+            stopColor="rgb(0.172424%, 66.435242%, 64.680481%)"
             offset="0.574219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.170898%, 66.389465%, 64.996338%)"
+            stopColor="rgb(0.170898%, 66.389465%, 64.996338%)"
             offset="0.578125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.169373%, 66.342163%, 65.310669%)"
+            stopColor="rgb(0.169373%, 66.342163%, 65.310669%)"
             offset="0.582031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.167847%, 66.296387%, 65.625%)"
+            stopColor="rgb(0.167847%, 66.296387%, 65.625%)"
             offset="0.585937"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.166321%, 66.249084%, 65.939331%)"
+            stopColor="rgb(0.166321%, 66.249084%, 65.939331%)"
             offset="0.589844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.164795%, 66.203308%, 66.255188%)"
+            stopColor="rgb(0.164795%, 66.203308%, 66.255188%)"
             offset="0.59375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.163269%, 66.156006%, 66.569519%)"
+            stopColor="rgb(0.163269%, 66.156006%, 66.569519%)"
             offset="0.597656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.161743%, 66.110229%, 66.885376%)"
+            stopColor="rgb(0.161743%, 66.110229%, 66.885376%)"
             offset="0.601562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.160217%, 66.062927%, 67.199707%)"
+            stopColor="rgb(0.160217%, 66.062927%, 67.199707%)"
             offset="0.605469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.158691%, 66.015625%, 67.514038%)"
+            stopColor="rgb(0.158691%, 66.015625%, 67.514038%)"
             offset="0.609375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.157166%, 65.968323%, 67.828369%)"
+            stopColor="rgb(0.157166%, 65.968323%, 67.828369%)"
             offset="0.613281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.15564%, 65.922546%, 68.144226%)"
+            stopColor="rgb(0.15564%, 65.922546%, 68.144226%)"
             offset="0.617188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.154114%, 65.875244%, 68.458557%)"
+            stopColor="rgb(0.154114%, 65.875244%, 68.458557%)"
             offset="0.621094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.152588%, 65.829468%, 68.774414%)"
+            stopColor="rgb(0.152588%, 65.829468%, 68.774414%)"
             offset="0.625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.151062%, 65.782166%, 69.088745%)"
+            stopColor="rgb(0.151062%, 65.782166%, 69.088745%)"
             offset="0.628906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.149536%, 65.736389%, 69.403076%)"
+            stopColor="rgb(0.149536%, 65.736389%, 69.403076%)"
             offset="0.632812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.14801%, 65.689087%, 69.717407%)"
+            stopColor="rgb(0.14801%, 65.689087%, 69.717407%)"
             offset="0.636719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.146484%, 65.643311%, 70.033264%)"
+            stopColor="rgb(0.146484%, 65.643311%, 70.033264%)"
             offset="0.640625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.144958%, 65.596008%, 70.347595%)"
+            stopColor="rgb(0.144958%, 65.596008%, 70.347595%)"
             offset="0.644531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.143433%, 65.548706%, 70.663452%)"
+            stopColor="rgb(0.143433%, 65.548706%, 70.663452%)"
             offset="0.648438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.141907%, 65.501404%, 70.977783%)"
+            stopColor="rgb(0.141907%, 65.501404%, 70.977783%)"
             offset="0.652344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.140381%, 65.455627%, 71.292114%)"
+            stopColor="rgb(0.140381%, 65.455627%, 71.292114%)"
             offset="0.65625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.138855%, 65.408325%, 71.606445%)"
+            stopColor="rgb(0.138855%, 65.408325%, 71.606445%)"
             offset="0.660156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.137329%, 65.362549%, 71.922302%)"
+            stopColor="rgb(0.137329%, 65.362549%, 71.922302%)"
             offset="0.664063"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.135803%, 65.315247%, 72.236633%)"
+            stopColor="rgb(0.135803%, 65.315247%, 72.236633%)"
             offset="0.667969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.134277%, 65.26947%, 72.55249%)"
+            stopColor="rgb(0.134277%, 65.26947%, 72.55249%)"
             offset="0.671875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.132751%, 65.222168%, 72.866821%)"
+            stopColor="rgb(0.132751%, 65.222168%, 72.866821%)"
             offset="0.675781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.131226%, 65.176392%, 73.181152%)"
+            stopColor="rgb(0.131226%, 65.176392%, 73.181152%)"
             offset="0.679688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.1297%, 65.129089%, 73.495483%)"
+            stopColor="rgb(0.1297%, 65.129089%, 73.495483%)"
             offset="0.683594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.128174%, 65.081787%, 73.81134%)"
+            stopColor="rgb(0.128174%, 65.081787%, 73.81134%)"
             offset="0.6875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.126648%, 65.034485%, 74.125671%)"
+            stopColor="rgb(0.126648%, 65.034485%, 74.125671%)"
             offset="0.691406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.125122%, 64.988708%, 74.441528%)"
+            stopColor="rgb(0.125122%, 64.988708%, 74.441528%)"
             offset="0.695312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.123596%, 64.941406%, 74.755859%)"
+            stopColor="rgb(0.123596%, 64.941406%, 74.755859%)"
             offset="0.699219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.12207%, 64.89563%, 75.07019%)"
+            stopColor="rgb(0.12207%, 64.89563%, 75.07019%)"
             offset="0.703125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.120544%, 64.848328%, 75.384521%)"
+            stopColor="rgb(0.120544%, 64.848328%, 75.384521%)"
             offset="0.707031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.119019%, 64.802551%, 75.700378%)"
+            stopColor="rgb(0.119019%, 64.802551%, 75.700378%)"
             offset="0.710938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.117493%, 64.755249%, 76.014709%)"
+            stopColor="rgb(0.117493%, 64.755249%, 76.014709%)"
             offset="0.714844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.115967%, 64.709473%, 76.330566%)"
+            stopColor="rgb(0.115967%, 64.709473%, 76.330566%)"
             offset="0.71875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.114441%, 64.66217%, 76.644897%)"
+            stopColor="rgb(0.114441%, 64.66217%, 76.644897%)"
             offset="0.722656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.112915%, 64.614868%, 76.959229%)"
+            stopColor="rgb(0.112915%, 64.614868%, 76.959229%)"
             offset="0.726562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.109863%, 64.567566%, 77.27356%)"
+            stopColor="rgb(0.109863%, 64.567566%, 77.27356%)"
             offset="0.730469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.108337%, 64.52179%, 77.589417%)"
+            stopColor="rgb(0.108337%, 64.52179%, 77.589417%)"
             offset="0.734375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.106812%, 64.474487%, 77.903748%)"
+            stopColor="rgb(0.106812%, 64.474487%, 77.903748%)"
             offset="0.738281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.105286%, 64.428711%, 78.219604%)"
+            stopColor="rgb(0.105286%, 64.428711%, 78.219604%)"
             offset="0.742188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.10376%, 64.381409%, 78.533936%)"
+            stopColor="rgb(0.10376%, 64.381409%, 78.533936%)"
             offset="0.746094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.102234%, 64.335632%, 78.848267%)"
+            stopColor="rgb(0.102234%, 64.335632%, 78.848267%)"
             offset="0.75"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.100708%, 64.28833%, 79.162598%)"
+            stopColor="rgb(0.100708%, 64.28833%, 79.162598%)"
             offset="0.753906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0991821%, 64.242554%, 79.478455%)"
+            stopColor="rgb(0.0991821%, 64.242554%, 79.478455%)"
             offset="0.757812"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0976562%, 64.195251%, 79.792786%)"
+            stopColor="rgb(0.0976562%, 64.195251%, 79.792786%)"
             offset="0.761719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0961304%, 64.149475%, 80.108643%)"
+            stopColor="rgb(0.0961304%, 64.149475%, 80.108643%)"
             offset="0.765625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0946045%, 64.102173%, 80.422974%)"
+            stopColor="rgb(0.0946045%, 64.102173%, 80.422974%)"
             offset="0.769531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0930786%, 64.054871%, 80.737305%)"
+            stopColor="rgb(0.0930786%, 64.054871%, 80.737305%)"
             offset="0.773438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0915527%, 64.007568%, 81.051636%)"
+            stopColor="rgb(0.0915527%, 64.007568%, 81.051636%)"
             offset="0.777344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0900269%, 63.961792%, 81.367493%)"
+            stopColor="rgb(0.0900269%, 63.961792%, 81.367493%)"
             offset="0.78125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.088501%, 63.91449%, 81.681824%)"
+            stopColor="rgb(0.088501%, 63.91449%, 81.681824%)"
             offset="0.785156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0869751%, 63.868713%, 81.997681%)"
+            stopColor="rgb(0.0869751%, 63.868713%, 81.997681%)"
             offset="0.789063"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0854492%, 63.821411%, 82.312012%)"
+            stopColor="rgb(0.0854492%, 63.821411%, 82.312012%)"
             offset="0.792969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0839233%, 63.775635%, 82.626343%)"
+            stopColor="rgb(0.0839233%, 63.775635%, 82.626343%)"
             offset="0.796875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0823975%, 63.728333%, 82.940674%)"
+            stopColor="rgb(0.0823975%, 63.728333%, 82.940674%)"
             offset="0.800781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0808716%, 63.682556%, 83.256531%)"
+            stopColor="rgb(0.0808716%, 63.682556%, 83.256531%)"
             offset="0.804688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0793457%, 63.635254%, 83.570862%)"
+            stopColor="rgb(0.0793457%, 63.635254%, 83.570862%)"
             offset="0.808594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0778198%, 63.587952%, 83.886719%)"
+            stopColor="rgb(0.0778198%, 63.587952%, 83.886719%)"
             offset="0.8125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0762939%, 63.540649%, 84.20105%)"
+            stopColor="rgb(0.0762939%, 63.540649%, 84.20105%)"
             offset="0.816406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0747681%, 63.494873%, 84.515381%)"
+            stopColor="rgb(0.0747681%, 63.494873%, 84.515381%)"
             offset="0.820312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0732422%, 63.447571%, 84.829712%)"
+            stopColor="rgb(0.0732422%, 63.447571%, 84.829712%)"
             offset="0.824219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0717163%, 63.401794%, 85.145569%)"
+            stopColor="rgb(0.0717163%, 63.401794%, 85.145569%)"
             offset="0.828125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0701904%, 63.354492%, 85.4599%)"
+            stopColor="rgb(0.0701904%, 63.354492%, 85.4599%)"
             offset="0.832031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0686646%, 63.308716%, 85.775757%)"
+            stopColor="rgb(0.0686646%, 63.308716%, 85.775757%)"
             offset="0.835938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0671387%, 63.261414%, 86.090088%)"
+            stopColor="rgb(0.0671387%, 63.261414%, 86.090088%)"
             offset="0.839844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0656128%, 63.215637%, 86.405945%)"
+            stopColor="rgb(0.0656128%, 63.215637%, 86.405945%)"
             offset="0.84375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0640869%, 63.168335%, 86.720276%)"
+            stopColor="rgb(0.0640869%, 63.168335%, 86.720276%)"
             offset="0.847656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.062561%, 63.121033%, 87.034607%)"
+            stopColor="rgb(0.062561%, 63.121033%, 87.034607%)"
             offset="0.851562"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0610352%, 63.07373%, 87.348938%)"
+            stopColor="rgb(0.0610352%, 63.07373%, 87.348938%)"
             offset="0.855469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0595093%, 63.027954%, 87.664795%)"
+            stopColor="rgb(0.0595093%, 63.027954%, 87.664795%)"
             offset="0.859375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0579834%, 62.980652%, 87.979126%)"
+            stopColor="rgb(0.0579834%, 62.980652%, 87.979126%)"
             offset="0.863281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0564575%, 62.934875%, 88.294983%)"
+            stopColor="rgb(0.0564575%, 62.934875%, 88.294983%)"
             offset="0.867188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0549316%, 62.887573%, 88.609314%)"
+            stopColor="rgb(0.0549316%, 62.887573%, 88.609314%)"
             offset="0.871094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0534058%, 62.841797%, 88.923645%)"
+            stopColor="rgb(0.0534058%, 62.841797%, 88.923645%)"
             offset="0.875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0518799%, 62.794495%, 89.237976%)"
+            stopColor="rgb(0.0518799%, 62.794495%, 89.237976%)"
             offset="0.878906"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.050354%, 62.748718%, 89.553833%)"
+            stopColor="rgb(0.050354%, 62.748718%, 89.553833%)"
             offset="0.882813"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0488281%, 62.701416%, 89.868164%)"
+            stopColor="rgb(0.0488281%, 62.701416%, 89.868164%)"
             offset="0.886719"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0473022%, 62.654114%, 90.184021%)"
+            stopColor="rgb(0.0473022%, 62.654114%, 90.184021%)"
             offset="0.890625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0457764%, 62.606812%, 90.498352%)"
+            stopColor="rgb(0.0457764%, 62.606812%, 90.498352%)"
             offset="0.894531"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0442505%, 62.561035%, 90.812683%)"
+            stopColor="rgb(0.0442505%, 62.561035%, 90.812683%)"
             offset="0.898438"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0427246%, 62.513733%, 91.127014%)"
+            stopColor="rgb(0.0427246%, 62.513733%, 91.127014%)"
             offset="0.902344"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0411987%, 62.467957%, 91.442871%)"
+            stopColor="rgb(0.0411987%, 62.467957%, 91.442871%)"
             offset="0.90625"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0396729%, 62.420654%, 91.757202%)"
+            stopColor="rgb(0.0396729%, 62.420654%, 91.757202%)"
             offset="0.910156"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.038147%, 62.374878%, 92.073059%)"
+            stopColor="rgb(0.038147%, 62.374878%, 92.073059%)"
             offset="0.914062"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0366211%, 62.327576%, 92.38739%)"
+            stopColor="rgb(0.0366211%, 62.327576%, 92.38739%)"
             offset="0.917969"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0350952%, 62.281799%, 92.701721%)"
+            stopColor="rgb(0.0350952%, 62.281799%, 92.701721%)"
             offset="0.921875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0335693%, 62.234497%, 93.016052%)"
+            stopColor="rgb(0.0335693%, 62.234497%, 93.016052%)"
             offset="0.925781"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0320435%, 62.187195%, 93.331909%)"
+            stopColor="rgb(0.0320435%, 62.187195%, 93.331909%)"
             offset="0.929688"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0305176%, 62.139893%, 93.64624%)"
+            stopColor="rgb(0.0305176%, 62.139893%, 93.64624%)"
             offset="0.933594"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0289917%, 62.094116%, 93.962097%)"
+            stopColor="rgb(0.0289917%, 62.094116%, 93.962097%)"
             offset="0.9375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0274658%, 62.046814%, 94.276428%)"
+            stopColor="rgb(0.0274658%, 62.046814%, 94.276428%)"
             offset="0.941406"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0259399%, 62.001038%, 94.590759%)"
+            stopColor="rgb(0.0259399%, 62.001038%, 94.590759%)"
             offset="0.945312"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0244141%, 61.953735%, 94.90509%)"
+            stopColor="rgb(0.0244141%, 61.953735%, 94.90509%)"
             offset="0.949219"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0228882%, 61.907959%, 95.220947%)"
+            stopColor="rgb(0.0228882%, 61.907959%, 95.220947%)"
             offset="0.953125"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0213623%, 61.860657%, 95.535278%)"
+            stopColor="rgb(0.0213623%, 61.860657%, 95.535278%)"
             offset="0.957031"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0198364%, 61.81488%, 95.851135%)"
+            stopColor="rgb(0.0198364%, 61.81488%, 95.851135%)"
             offset="0.960938"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0183105%, 61.767578%, 96.165466%)"
+            stopColor="rgb(0.0183105%, 61.767578%, 96.165466%)"
             offset="0.964844"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0167847%, 61.721802%, 96.479797%)"
+            stopColor="rgb(0.0167847%, 61.721802%, 96.479797%)"
             offset="0.96875"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0152588%, 61.6745%, 96.794128%)"
+            stopColor="rgb(0.0152588%, 61.6745%, 96.794128%)"
             offset="0.972656"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0137329%, 61.627197%, 97.109985%)"
+            stopColor="rgb(0.0137329%, 61.627197%, 97.109985%)"
             offset="0.976563"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.012207%, 61.579895%, 97.424316%)"
+            stopColor="rgb(0.012207%, 61.579895%, 97.424316%)"
             offset="0.980469"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.0106812%, 61.534119%, 97.740173%)"
+            stopColor="rgb(0.0106812%, 61.534119%, 97.740173%)"
             offset="0.984375"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.00915527%, 61.486816%, 98.054504%)"
+            stopColor="rgb(0.00915527%, 61.486816%, 98.054504%)"
             offset="0.988281"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.00762939%, 61.44104%, 98.368835%)"
+            stopColor="rgb(0.00762939%, 61.44104%, 98.368835%)"
             offset="0.992188"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.00610352%, 61.393738%, 98.683167%)"
+            stopColor="rgb(0.00610352%, 61.393738%, 98.683167%)"
             offset="0.996094"
           />
           <stop
             stopOpacity="1"
-            stop-color="rgb(0.00457764%, 61.347961%, 98.999023%)"
+            stopColor="rgb(0.00457764%, 61.347961%, 98.999023%)"
             offset="1"
           />
         </linearGradient>
