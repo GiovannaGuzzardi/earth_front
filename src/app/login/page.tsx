@@ -2,21 +2,22 @@
 import { useAppContext } from "@/context";
 import { Alert, Input, Button } from "antd";
 import Link from "antd/es/typography/Link";
-import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
-import Image from "next/image";
-import brasil from "../../../public/img/brasil.svg";
+import { FacebookLogo, GoogleLogo } from "phosphor-react";
+import { BrasilText } from "../../../public/img/brasil_text";
 
 export default function login() {
-  const router = useRouter();
-  const { setAuth, fetchAuth, auth, contextHolder } = useAppContext();
+  const { setAuth, fetchAuth, auth } = useAppContext();
   const [message, setError] = useState<string>("");
 
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const email = (document.getElementById("email_log") as HTMLInputElement).value;
-    const password = (document.getElementById("password_log") as HTMLInputElement).value;
+    const email = (document.getElementById("email_log") as HTMLInputElement)
+      .value;
+    const password = (
+      document.getElementById("password_log") as HTMLInputElement
+    ).value;
 
     setAuth({
       username: email,
@@ -25,28 +26,58 @@ export default function login() {
   };
 
   useEffect(() => {
-    if (auth.username && auth.password) {
+    if (auth?.username && auth?.password) {
       fetchAuth().then((result) => {
         if (!result.success) {
           setError(result.message);
         }
       });
+      setAuth(null);
     }
   }, [auth]);
 
   return (
-    <div className="flex flex-row items-center flex-grow p-4 justify-evenly bg-slate-200 ">
-      <div className="flex flex-col flex-grow-0 justify-center bg-slate-50 p-4 rounded-md items-center">
-        <h1 className="font-bold  text-center m-4 text-lg">Seja Bem Vindo, Realize seu login</h1>
-        {message && <Alert message={message} className="mb-4 min-w-max" type="error" showIcon />}
-        <form onSubmit={onSubmit} className="grid grid-flow-row gap-4 items-center">
+    <div className="flex flex-wrap-reverse h-[100%] justify-between px-[3vw] py-[3vh] overflow-auto bg-gradient-to-l from-primary-300 to-white ">
+      <div className="w-1/2 h-full flex-grow-0  ">
+        <BrasilText width={"85%"} height={"100%"} />
+      </div>
+      <div className="flex flex-col flex-grow justify-between bg-slate-50 mr-2- p-[2.5rem] rounded-md items-center max-w-[25rem] self-center w-2/5 mr-[2rem]">
+        <button
+          // onClick={signInWithGoogle}
+          className="bg-blue-700 text-white font-bold ease-in hover:bg-blue-800 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full"
+        >
+          <GoogleLogo size={24} color="#ffffff" weight="fill" />
+          <h3 className="ml-[1rem]">Entrar com o google</h3>
+        </button>
+        <button
+          // onClick={signInWithFacebook}
+          className="bg-blue-500 text-white font-bold ease-in hover:bg-blue-600 rounded-md py-[0.5rem] px-[0.8rem] m-[0.5rem] flex w-full"
+        >
+          <FacebookLogo size={24} color="#ffffff" weight="fill" />
+          <h3 className="ml-[1rem]">Entrar com o facebook</h3>
+        </button>
+        <h1 className="font-bold  text-center my-7 text-xl">
+          Ou, entre com seu e-mail
+        </h1>
+        {message && (
+          <Alert
+            message={message}
+            className="mb-4 w-[-webkit-fill-available]"
+            type="error"
+            showIcon
+          />
+        )}
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col flex-grow justify-cente w-full "
+        >
           <Input
             type="email"
             placeholder="Insira o seu e-mail "
             required={true}
             size="large"
             id="email_log"
-            className="min-w-80"
+            className="mb-3"
           />
           <Input.Password
             type="password"
@@ -54,32 +85,31 @@ export default function login() {
             placeholder="Insira a sua senha"
             size="large"
             id="password_log"
+            className="mb-3"
           />
-          <Button type="primary" htmlType="submit" size="large">
+          <Button
+            type="primary"
+            htmlType="submit"
+            size="large"
+            className="mb-3"
+          >
             Entrar
           </Button>
         </form>
-    <div className="flex flex-col my-2">
-    <Link href="" className=" text-center text-black hover:text-primary-400">
-          esqueceu sua senha?
-        </Link>
-        <Link href="" className=" text-center text-black hover:text-primary-400 ">
-        Ainda não é cadastrado? realize seu registro
-        </Link>
-    </div>
-        <h2 className="text-lg ">Ou entre com</h2>
-        <div className="grid gap-2 grid-flow-col grid-cols-3 my-2">
-           <div className=" rounded-full bg-slate-600 w-2 h-2 p-5 "></div>
-           <div className=" rounded-full bg-slate-600 w-2 h-2 p-5 "></div>
-           <div className=" rounded-full bg-slate-600 w-2 h-2 p-5 "></div>
+        <div className="flex flex-col my-2">
+          <Link
+            href=""
+            className=" text-center text-black hover:text-primary-400"
+          >
+            Esqueceu sua senha?
+          </Link>
+          <Link
+            href=""
+            className=" text-center text-black hover:text-primary-400 "
+          >
+            Ainda não é cadastrado? realize seu registro
+          </Link>
         </div>
-      </div>
-      <div className="flex items-center justify-center h-auto w-auto">
-        <Image
-          src={brasil}
-          alt="Brasil"
-          style={{ height: "auto", width: "100%", maxWidth: "35rem" }}
-        />
       </div>
     </div>
   );

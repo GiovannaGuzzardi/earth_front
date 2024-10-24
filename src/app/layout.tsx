@@ -5,6 +5,7 @@ import { Layout } from "@/components/layout";
 import { AppWrapper } from "@/context";
 import { StoreWrapper } from "@/context/store";
 import { ConfigProvider } from "antd";
+import { Height } from "@mui/icons-material";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,29 +19,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <AppWrapper>
       <StoreWrapper>
-      <ConfigProvider
-            theme={{
-              components: {
-                Button: {
-                  colorPrimary: "#5800cc",
-                  algorithm: true, // Enable algorithm
-                },
+        <ConfigProvider
+          theme={{
+            components: {
+              Button: {
+                colorPrimary: "#01bb2f",
+                algorithm: true, // Enable algorithm
               },
-            }}
-          >
-        <html lang="en">
-          <body className="h-screen w-screen overflow-hidden flex flex-col">
-            <main className="flex-grow flex flex-col">
-              <Layout />
-              {children}
-            </main>
-          </body>
-        </html>
-      </ConfigProvider>
+            },
+          }}
+        >
+          <html lang="en">
+            <body className="h-screen w-screen overflow-hidden flex flex-col">
+              <main className="flex-grow flex flex-col max-h-lvh">
+                <Layout />
+                <div className="flex-grow overflow-auto bg-primary-100">{children}</div>
+              </main>
+            </body>
+          </html>
+        </ConfigProvider>
       </StoreWrapper>
     </AppWrapper>
   );

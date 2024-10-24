@@ -6,8 +6,8 @@ import {
 } from "react";
 
 export interface AppContextType {
-  auth: AuthType;
-  setAuth: Dispatch<SetStateAction<AuthType>>;
+  auth: AuthType | null;
+  setAuth: Dispatch<SetStateAction<AuthType | null>>;
   token: TokenType | null;
   setToken: Dispatch<SetStateAction<TokenType | null>>;
   fetchAuth: () => Promise<FetchAuthResult>; // Aqui está a assinatura correta

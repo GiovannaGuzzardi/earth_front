@@ -22,7 +22,7 @@ const AppContext = createContext<AppContextType>({
   contextHolder: <></>,
 });
 export function AppWrapper({ children }: { children: React.ReactNode }) {
-  let [auth, setAuth] = useState<AuthType>({} as AuthType);
+  let [auth, setAuth] = useState<AuthType | null>({} as AuthType);
   let [token, setToken] = useState<TokenType | null>(null);
   const [apiAnt, contextHolder] = notification.useNotification();
   const [error, setError] = useState<{} | null>(null);
@@ -38,6 +38,9 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
   async function fetchAuth(): Promise<FetchAuthResult> {
     try {
       const params = new URLSearchParams();
+      if (!auth) {
+        return { success: false, message: "Usuário não autenticado" };
+      }
       params.append("username", auth.username);
       params.append("password", auth.password);
 

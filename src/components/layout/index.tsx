@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import logo_text from "../../../public/img/logo_text.svg";
+import logo_text from "../../../public/img/brasil_text_branco.svg";
 import Image from "next/image";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useAppContext } from "@/context";
@@ -35,7 +35,7 @@ export function Layout() {
   };
 
   return (
-    <nav className="w-full flex justify-between items-center bg-opacity-90 bg-primary-400 border-b-2 border-primary-200">
+    <nav className="w-full flex flex-grow-0 justify-between items-center bg-opacity-90 bg-primary-400 border-b-2 border-primary-300">
       <a className="flex-grow-0 ml-3" href="/">
         <Image
           src={logo_text}

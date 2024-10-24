@@ -17,16 +17,16 @@
   @layer base {
     :root {
 
-    --primary-100: #e2dffb; /* Very Light Blue */
-    --primary-200: #b694f8; /* Light Blue */
-    --primary-300: #793bf6; /* Bright Blue */
-    --primary-400: #5800cc; /* Medium Blue */
-    --primary-500: #3f00b3; /* Dark Blue */
+    --primary-100: #e2f0e9; /* Very Light Blue */
+    --primary-200: #b8ffc9; /* Light Blue */
+    --primary-300: #96f1ab; /* Bright Blue */
+    --primary-400: #01bb2f; /* Medium Blue */
+    --primary-500: #4beb48; /* Dark Blue */
     --primary-600: #2d0080; /* Darker Blue */
-    --primary-700: #1d0066; /* Very Dark Blue */
-    --primary-800: #17004d; /* Navy Blue */
+    --primary-700: #b5e3ff; /* Very Dark Blue */
+    --primary-800: #009cff; /* Navy Blue */
     --primary-900: #0f0033; /* Very Dark Navy Blue */
-    --primary-1000: #000d1a; /* Almost Black Navy Blue */
+    --primary-1000: hwb(210 0% 90%); /* Almost Black Navy Blue */
 
 
 
