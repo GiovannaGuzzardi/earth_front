@@ -74,7 +74,7 @@ export default function login() {
           className="flex flex-col flex-grow justify-cente w-full "
         >
           <Input
-            type="email"
+            type="text"
             placeholder="Insira o seu e-mail "
             required={true}
             size="large"

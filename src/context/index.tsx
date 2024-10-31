@@ -54,7 +54,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
       console.log("Token recebido:", data);
       sessionStorage.setItem("authToken", JSON.stringify(data));
       setToken(data); // Atualizando o estado com o token recebido
-      router.push("/resgatar"); // Redirecionando para a página inicial após o login
+      router.push("/farm"); // Redirecionando para a página inicial após o login
       setTimeout(() => {
         apiAnt.open({
           message: "Bem vindo à Earth Brasil!",
@@ -68,6 +68,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
       return { success: true, message: "Usuario logado com sucesso!" };
     } catch (error: any) {
       if (error.response) {
+        console.log("Erro", error.response.status, error.response.data.detail, error.response.data);
         return { success: false, message: "Erro" + error.response.status + ": " + error.response.data.detail };
       } else {
         return { success: false, message: `Erro desconhecido${error}`};

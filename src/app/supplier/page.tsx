@@ -1,7 +1,7 @@
-export default function vender() {
+export default function supplier() {
   return (
     <main className="flex-1 overflow-auto">
-      <div>vender</div>
+      <div>supplier</div>
     </main>
   );
 }

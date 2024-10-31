@@ -26,7 +26,7 @@ export default function RootLayout({
           theme={{
             components: {
               Button: {
-                colorPrimary: "#01bb2f",
+                colorPrimary: "#0a8528",
                 algorithm: true, // Enable algorithm
               },
             },
