@@ -6,6 +6,7 @@ import { AppWrapper } from "@/context";
 import { StoreWrapper } from "@/context/store";
 import { ConfigProvider } from "antd";
 import { Height } from "@mui/icons-material";
+import { FarmWrapper } from "@/context/farm";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <AppWrapper>
-      <StoreWrapper>
+      <FarmWrapper>
         <ConfigProvider
           theme={{
             components: {
@@ -41,7 +42,7 @@ export default function RootLayout({
             </body>
           </html>
         </ConfigProvider>
-      </StoreWrapper>
+      </FarmWrapper>
     </AppWrapper>
   );
 }
