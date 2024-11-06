@@ -7,6 +7,9 @@ import FilterBar from "@/lib/interfaces/filterbar";
 import { useRouter } from "next/navigation";
 import { useFarmContext } from "@/context/farm";
 import { FarmType } from "@/context/farm/type";
+import { fieldTranslationsFarmCard, orderedKeysFarmCard } from "./farmutils";
+import { Modal } from "antd";
+import ModalFarm from "@/components/farm/modalFarm";
 
 export default function farm() {
   const [position, setPosition] = useState<"start" | "end">("end");
@@ -24,52 +27,20 @@ export default function farm() {
     fetchFarm();
   }, []);
 
-  
-
   const handleChange = (value: string) => {
     console.log(`selected ${value}`);
   };
-
-  // Mapeamento das chaves com traduções para exibição
-  const fieldTranslations: { [key: string]: string } = {
-    id: "ID",
-    name: "Nome",
-    state: "Estado",
-    city: "Cidade",
-    area: "Área",
-    longitude: "Longitude",
-    latitude: "Latitude",
-    average_altitude: "Altitude Média",
-    // Adicione mais traduções conforme necessário
-  };
-  // Ordem desejada das chaves para exibição
-  const orderedKeys: (keyof FarmType)[] = [
-    "id",
-    "name",
-    "state",
-    "city",
-    "area",
-    "longitude",
-    "latitude",
-    "average_altitude",
-    // ... outras chaves que você quer usar
-  ];
 
   return (
     <div className="flex h-full w-full">
       {search && <FilterBar inputs={inputs} />}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
         <div className="bg-neutral-50 flex w-full p-2 justify-between items-center rounded-md flex-grow-0 shadow-xl">
-          <h3 className=" text-primary-400">Fazendas Cadastradas</h3>
+          <h3 className=" text-primary-400 font-semibold">
+            Fazendas Cadastradas
+          </h3>
           <div className="flex items-center gap-3 flex-grow justify-end">
-            <Button
-              type="primary"
-              onClick={() => {
-                router.push("/farm/register");
-              }}
-            >
-              Adicionar Fazenda
-            </Button>
+            <ModalFarm />
             <Button
               type="primary"
               onClick={() => {
@@ -94,14 +65,14 @@ export default function farm() {
                 />
                 <div className="grid grid-cols-[repeat(4,_minmax(0,_25%))] items-start justify-start h-full flex-grow gap-3 p-3">
                   {farm.length > 0 ? (
-                    orderedKeys.map((key) => (
+                    orderedKeysFarmCard.map((key) => (
                       <div key={key} className="flex flex-col w-full">
-                        <div className="text-sm break-words opacity-80">
-                          {fieldTranslations[key]}
+                        <div className="text-sm break-words opacity-90 font-semibold">
+                          {fieldTranslationsFarmCard[key]}
                         </div>
-                        <div className="text-base font-bold break-words">
-                          {farm[0][key as keyof FarmType] !== undefined
-                            ? farm[0][key as keyof FarmType]
+                        <div className="text-base break-words">
+                          {farm[index][key as keyof FarmType] !== undefined
+                            ? farm[index][key as keyof FarmType]
                             : "N/A"}
                         </div>
                       </div>
@@ -117,7 +88,14 @@ export default function farm() {
                   >
                     Saber Mais
                   </Button>
-                  <Button type="primary">Mapeamento</Button>
+                  <Button
+                    type="primary"
+                    onClick={() => {
+                      window.open(value.location_link, "_blank");
+                    }}
+                  >
+                    Mapeamento
+                  </Button>
                   <Button type="primary" danger>
                     Excluir
                   </Button>
@@ -128,10 +106,11 @@ export default function farm() {
         </div>
         <div className="bg-neutral-50 flex w-full p-3 justify-between items-center rounded-md flex-grow-0 shadow-xl">
           <p className="flex-grow-0">
-            Total: <b>53</b>
+            <b className="mr-1 font-semibold">Total:</b>
+            {farm.length} fazendas
           </p>
           <div className="flex items-center gap-3 flex-grow justify-end">
-            <p className="flex-grow-0">Pagina:</p>
+            <p className="flex-grow-0 font-semibold ">Pagina:</p>
             <Radio.Group
               value={position}
               onChange={(e) => setPosition(e.target.value)}

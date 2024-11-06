@@ -11,7 +11,7 @@ interface FilterBarProps {
 
 export default function FilterBar({inputs = [], buttons = [], select = [], radio = [], checkbox = []}: FilterBarProps) {
   return (
-    <div className="bg-neutral-50 w-1/4 p-3 rounded-md flex flex-col gap-3 m-3 mr-0 shadow-xl justify-between overflow-auto">
+    <div className="bg-neutral-50 w-1/4 p-3 rounded-md flex flex-col gap-3 m-3 mr-0 shadow-xl justify-between overflow-auto flex-grow">
       <div className="flex flex-col gap-3">
         {inputs?.map((input, index) => (
           <Input key={index + "FilterBarInput"} placeholder={input.placeholder} {...input} />

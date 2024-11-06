@@ -28,10 +28,6 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
     }
   }
 
-  // Este useEffect será executado toda vez que `farm` for atualizado
-  useEffect(() => {
-    console.log("Dados de farm foram atualizados:", farm);
-  }, [farm]);
   return (
     <FarmContext.Provider value={{ farm, setFarm, fetchFarm }}>
       {children}
