@@ -25,7 +25,7 @@ export function Layout() {
   const { token, logout } = useAppContext();
 
   useEffect(() => {
-    console.log(token);
+    console.log("Token:", token);
     if (token) {
       setOptions([
         { name: "Fazendas", link: "/farm" },
@@ -71,10 +71,11 @@ export function Layout() {
           ))}
           {token && (
             <div className="flex space-x-5">
-              {navbuttons.map((element) => (
+              {navbuttons.map((element, index) => (
                 <button
                   className="font-bold text-xl text-slate-50  hover:text-slate-300 flex items-center"
                   onClick={element.onclick}
+                  key={index + "navbutton"}
                 >
                   {element.icon}
                 </button>

@@ -23,7 +23,7 @@ export function StoreWrapper({ children }: { children: React.ReactNode }) {
     try {
       const response = await api.get("/store/");
       setStore(response.data);
-      console.log("storee atualizado:", store);
+      console.log("store atualizado:", store);
     } catch (error) {
       console.error("Erro ao buscar dados da API:", error);
     }
