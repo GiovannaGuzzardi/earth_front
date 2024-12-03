@@ -20,6 +20,7 @@ const AppContext = createContext<AppContextType>({
   fetchAuth: async () => ({ success: false, message: "Função não implementada." }),
   logout: async () => {},
   contextHolder: <></>,
+  apiAnt: notification,
 });
 export function AppWrapper({ children }: { children: React.ReactNode }) {
   let [auth, setAuth] = useState<AuthType | null>({} as AuthType);
@@ -100,6 +101,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
         fetchAuth,
         logout,
         contextHolder,
+        apiAnt,
       }}
     >
       {contextHolder}

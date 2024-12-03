@@ -8,6 +8,7 @@ export const fieldTranslationsFarmCard: { [key: string]: string } = {
     area: "Área",
     longitude: "Longitude",
     latitude: "Latitude",
+    location_link: "Link de Localização",
     average_altitude: "Altitude Média",
     registration: "Registro",
     record_car: "Registro CAR",

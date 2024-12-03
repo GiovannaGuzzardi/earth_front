@@ -1,21 +1,17 @@
 "use client";
-import { Alert, Input, Button, Radio, Select } from "antd";
-import { use, useEffect, useState } from "react";
+import { Button, Radio, Select } from "antd";
+import { useEffect, useState } from "react";
 import "../../styles/globals.css";
-import { Filter } from "@mui/icons-material";
 import FilterBar from "@/lib/interfaces/filterbar";
-import { useRouter } from "next/navigation";
 import { useFarmContext } from "@/context/farm";
 import { FarmType } from "@/context/farm/type";
 import { fieldTranslationsFarmCard, orderedKeysFarmCard } from "./farmutils";
-import { Modal } from "antd";
 import ModalFarm from "@/components/farm/modalFarm";
 
 export default function farm() {
   const [position, setPosition] = useState<"start" | "end">("end");
   const [search, setSearch] = useState(false);
   const { fetchFarm, farm } = useFarmContext();
-  const router = useRouter();
 
   const inputs = [
     { placeholder: "Nome" },
@@ -33,7 +29,11 @@ export default function farm() {
 
   return (
     <div className="flex h-full w-full">
-      {search && <FilterBar inputs={inputs} />}
+      {search && (
+        <div className="p-3 pr-0 w-1/4 h-full">
+          <FilterBar inputs={inputs} />
+        </div>
+      )}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
         <div className="bg-neutral-50 flex w-full p-2 justify-between items-center rounded-md flex-grow-0 shadow-xl">
           <h3 className=" text-primary-400 font-semibold">

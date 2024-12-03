@@ -7,6 +7,7 @@ import { StoreWrapper } from "@/context/store";
 import { ConfigProvider } from "antd";
 import { Height } from "@mui/icons-material";
 import { FarmWrapper } from "@/context/farm";
+import ptBR from 'antd/locale/pt_BR'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
     <AppWrapper>
       <FarmWrapper>
         <ConfigProvider
+          locale={ptBR}
           theme={{
             components: {
               Button: {

@@ -13,6 +13,7 @@ export interface AppContextType {
   fetchAuth: () => Promise<FetchAuthResult>; // Aqui está a assinatura correta
   logout: () => {};
   contextHolder: ReactElement<any, string | JSXElementConstructor<any>>;
+  apiAnt: any;
 }
 
 export interface AuthType {

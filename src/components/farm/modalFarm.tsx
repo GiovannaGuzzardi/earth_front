@@ -1,54 +1,58 @@
+"use client";
 import { fieldTranslationsFarmCard } from "@/app/farm/farmutils";
 import { FarmType } from "@/context/farm/type";
-import { Button, Input, Modal } from "antd";
-import { useState } from "react";
-
-type Field = {
-  name: keyof FarmType;
-  type?: string;
-  required?: boolean;
-  value: string;
-  alert?: string;
-};
-
-const initialFields: Field[] = [
-  { name: "id", type: "text", required: false, value: "" , alert: ""},
-  { name: "name", type: "text", required: true, value: "", alert: "" },
-  { name: "state", type: "text", required: true, value: "" , alert: ""},
-  { name: "city", type: "text", required: true, value: ""  , alert: ""},
-  { name: "area", type: "number", required: true, value: ""  , alert: ""},
-  { name: "longitude", type: "number", required: true, value: "" , alert: ""},
-  { name: "latitude", type: "number", required: true, value: "" , alert: ""},
-  { name: "average_altitude", type: "number", required: false, value: "" , alert: ""},
-  { name: "registration", type: "text", required: false, value: "" , alert: ""},
-  { name: "record_car", type: "text", required: false, value: "" , alert: ""},
-  { name: "record_incra", type: "text", required: false, value: "" , alert: ""},
-  { name: "district", type: "text", required: false, value: "" , alert: ""},
-  { name: "subdistrict", type: "text", required: false, value: ""   , alert: ""},
-  { name: "generator_power", type: "number", required: false, value: "" , alert: ""},
-  { name: "wagon_capacity", type: "number", required: false, value: "" , alert: ""},
-  { name: "tank_capacity", type: "number", required: false, value: "" , alert: ""},
-];
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
+import { use, useState } from "react";
+import { Field, initialFields, valorDefault } from "./configFarm";
+import { useFarmContext } from "@/context/farm";
+import { useAppContext } from "@/context";
 
 export default function ModalFarm() {
+  // Estado do modal e valores do formulário
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [formValues, setFormValues] = useState<Field[]>(initialFields);
+  const [farmValues, setFormValues] = useState<FarmType>(valorDefault);
+  const [form] = Form.useForm();
+  const { postFarm } = useFarmContext();
+  const { apiAnt } = useAppContext();
+
+  // Funções para abrir e fechar o modal
   const showModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormValues((prevData) =>
-      prevData.map((field) =>
-        field.name === name ? { ...field, value: value } : field
-      )
-    );
-  };
-  const handleAddFarm = () => {
-    console.log(formValues);
-    // closeModal();
+  // Handle para submeter os dados
+  const handleAddFarm = (values: FarmType) => {
+    postFarm(values)
+      .then(() => {
+        handlecancel(); // Reseta campos e fecha modal
+        apiAnt.open({
+          message: `Fazenda ${values} adicionada com sucesso`,
+          type: "success",
+          duration: 4,
+          showProgress: true,
+          pauseOnHover: true,
+        });
+      })
+      .catch((error: any) => {
+        apiAnt.open({
+          message: "Erro ao adicionar fazenda",
+          description: error?.response?.data?.detail || "Algo deu errado",
+          type: "error",
+          duration: 4,
+          showProgress: true,
+          pauseOnHover: true,
+        });
+      });
   };
 
+  // Função para cancelar a operação
+  const handlecancel = () => {
+    form.resetFields(); // Reseta campos do formulário
+    setFormValues(valorDefault); // Reseta valores ao padrão
+    form.setFieldsValue(valorDefault); // Reaplica valores padrão explicitamente
+    closeModal(); // Fecha modal
+  };
+
+  // Renderização do componente
   return (
     <>
       <Button type="primary" onClick={showModal}>
@@ -57,44 +61,56 @@ export default function ModalFarm() {
       <Modal
         title="Criar nova fazenda"
         open={isModalOpen}
-        width={1000}
+        width={"80vw"}
         footer={null}
         onCancel={closeModal}
       >
-        <form
-          className="grid grid-cols-2 gap-2"
-          onSubmit={(e) => {
-            e.preventDefault(); // Previne o comportamento padrão de recarregar a página
-            handleAddFarm(); // Chama a função para adicionar a fazenda
+        <Form
+          form={form} // Vincula o form à instância criada
+          layout="vertical"
+          className="grid grid-cols-3 gap-x-3"
+          initialValues={farmValues} // Define valores iniciais
+          onFinish={handleAddFarm}
+          onValuesChange={(changedValues, allValues) => {
+            setFormValues(allValues); // Atualiza o estado com os valores mais recentes
           }}
         >
-          {formValues.map((field, index) => (
-            <Input
+          {initialFields.map((field) => (
+            <Form.Item
               key={field.name}
+              label={fieldTranslationsFarmCard[field.name]}
+              tooltip={field.alert}
               name={field.name}
-              value={formValues[index].value}
-              onChange={handleChange}
-              size="large"
-              placeholder={fieldTranslationsFarmCard[field.name]}
-              type={field.type}
-              required={field.required}
-            />
+              rules={[
+                { type: field.type },
+                { required: field.required, message: "Campo obrigatório" },
+              ]}
+              style={{ marginBottom: 1 }}
+            >
+              {field.typeInput === "select" ? (
+                <Select>
+                  {field.options?.map((option) => (
+                    <Select.Option key={option} value={option}>
+                      {option}
+                    </Select.Option>
+                  ))}
+                </Select>
+              ) : field.type === "number" ? (
+                <InputNumber />
+              ) : (
+                <Input />
+              )}
+            </Form.Item>
           ))}
           <div className="col-span-2 text-right flex space-x-2 mt-2">
             <Button key="submit" type="primary" htmlType="submit" size="large">
               Adicionar fazenda
             </Button>
-            <Button
-              key="cancel"
-              type="primary"
-              danger
-              onClick={closeModal}
-              size="large"
-            >
+            <Button type="primary" danger onClick={handlecancel} size="large">
               Cancelar
             </Button>
           </div>
-        </form>
+        </Form>
       </Modal>
     </>
   );
