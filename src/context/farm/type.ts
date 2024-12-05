@@ -5,6 +5,7 @@ export interface FarmContextType {
     setFarm: Dispatch<SetStateAction<FarmType[]>>;
     fetchFarm: () => Promise<void>;
     postFarm: (newFarm: FarmType) => Promise<void>;
+    getFarmById: (farmId: string) => Promise<FarmType>;
   }
 
 export interface FarmType {

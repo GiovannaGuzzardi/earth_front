@@ -5,8 +5,12 @@ import "../../styles/globals.css";
 import FilterBar from "@/lib/interfaces/filterbar";
 import { useFarmContext } from "@/context/farm";
 import { FarmType } from "@/context/farm/type";
-import { fieldTranslationsFarmCard, orderedKeysFarmCard } from "./farmutils";
+import {
+  fieldTranslationsFarmCard,
+  orderedKeysFarmCard,
+} from "../../components/farm/farmutils";
 import ModalFarm from "@/components/farm/modalFarm";
+import { useRouter } from "next/navigation";
 
 export default function farm() {
   const [position, setPosition] = useState<"start" | "end">("end");
@@ -18,6 +22,8 @@ export default function farm() {
     { placeholder: "Estado" },
     { placeholder: "Cidade" },
   ];
+
+  const router = useRouter();
 
   useEffect(() => {
     fetchFarm();
@@ -85,6 +91,11 @@ export default function farm() {
                   <Button
                     type="primary"
                     className="!bg-primary-800 !border-primary-800 !text-white hover:!bg-primary-800 hover:!border-primary-800 hover:opacity-80"
+                    onClick={
+                      () => {
+                        router.push(`/farm/${value.id}`);
+                    }
+                    }
                   >
                     Saber Mais
                   </Button>

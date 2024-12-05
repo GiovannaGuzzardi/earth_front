@@ -1,5 +1,5 @@
 "use client";
-import { fieldTranslationsFarmCard } from "@/app/farm/farmutils";
+import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
 import { FarmType } from "@/context/farm/type";
 import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import { use, useState } from "react";
