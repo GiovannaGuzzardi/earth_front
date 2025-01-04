@@ -16,6 +16,7 @@ const FarmContext = createContext<FarmContextType>({
   fetchFarm: async () => {},
   postFarm: async () => {},
   getFarmById: async () => ({} as FarmType),
+  putFarm: async () => {},
 });
 
 export function FarmWrapper({ children }: { children: React.ReactNode }) {
@@ -39,6 +40,15 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
     }
   }
 
+  async function putFarm(newFarm: FarmType) {
+    try {
+      await api.put(`/farm/${newFarm.id}`, newFarm);
+      fetchFarm();
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async function postFarm(newFarm: FarmType) {
     try {
       await api.post("/farm/", newFarm);
@@ -49,7 +59,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <FarmContext.Provider value={{ farm, setFarm, fetchFarm, postFarm , getFarmById}}>
+    <FarmContext.Provider value={{ farm, setFarm, fetchFarm, postFarm , getFarmById, putFarm}}>
       {children}
     </FarmContext.Provider>
   );

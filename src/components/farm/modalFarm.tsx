@@ -25,7 +25,7 @@ export default function ModalFarm() {
       .then(() => {
         handlecancel(); // Reseta campos e fecha modal
         apiAnt.open({
-          message: `Fazenda ${values} adicionada com sucesso`,
+          message: `Fazenda ${values.name} adicionada com sucesso`,
           type: "success",
           duration: 4,
           showProgress: true,

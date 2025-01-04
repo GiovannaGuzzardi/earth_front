@@ -31,7 +31,7 @@ export function Layout() {
         { name: "Fazendas", link: "/farm" },
         { name: "Produtores", link: "/grower" },
         { name: "Fornecedores", link: "/supplier" },
-        { name: "Aréa de Funcionarios", link: "/user" },
+        { name: "Transporte", link: "/transport" },
       ]);
     } else {
       setOptions(base);

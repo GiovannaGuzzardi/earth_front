@@ -13,7 +13,7 @@ export default function FarmDetails({
   params: { farmId: string };
 }) {
   const [farm, setFarm] = useState<FarmType | null>(null);
-  const { getFarmById } = useFarmContext();
+  const { getFarmById, putFarm } = useFarmContext();
   const [optionInfo, setOptionInfo] = useState(1);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function FarmDetails({
   ];
 
   const savePutFarm = () => {
-    console.log(farm);
+    putFarm(farm as FarmType);
   };
 
   const router = useRouter();
@@ -75,6 +75,7 @@ export default function FarmDetails({
                     <Input
                       placeholder={value}
                       size="large"
+                      disabled={key === "id"? true : false}
                       variant="filled"
                       className=" placeholder:text-slate-950 "
                       value={farm[key as keyof FarmType]}

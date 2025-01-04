@@ -6,6 +6,7 @@ export interface FarmContextType {
     fetchFarm: () => Promise<void>;
     postFarm: (newFarm: FarmType) => Promise<void>;
     getFarmById: (farmId: string) => Promise<FarmType>;
+    putFarm: (newFarm: FarmType) => Promise<void>;
   }
 
 export interface FarmType {
