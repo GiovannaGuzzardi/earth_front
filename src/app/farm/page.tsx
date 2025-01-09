@@ -131,7 +131,6 @@ export default function farm() {
             <Radio.Group
               value={position}
               onChange={(e) => setPosition(e.target.value)}
-              size="small"
             >
               {pageFarm.map((value, index) => (
                 <Radio.Button key={index} value={value}>
@@ -143,7 +142,6 @@ export default function farm() {
             <Select
               value={size}
               onChange={(value) => setSize(value)}
-              size="small"
               options={[
                 { value: 1, label: "1" },
                 { value: 10, label: "10" },
