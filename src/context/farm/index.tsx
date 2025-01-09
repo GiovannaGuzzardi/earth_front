@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
 } from "react";
-import { FarmContextType, FarmType } from "./type";
+import { FarmContextType, FarmPagination, FarmType } from "./type";
 
 const FarmContext = createContext<FarmContextType>({
   farm: [] as FarmType[],
@@ -17,16 +17,20 @@ const FarmContext = createContext<FarmContextType>({
   postFarm: async () => {},
   getFarmById: async () => ({} as FarmType),
   putFarm: async () => {},
+  farmPagination: {} as FarmPagination,
 });
 
 export function FarmWrapper({ children }: { children: React.ReactNode }) {
   const [farm, setFarm] = useState<FarmType[]>([] as FarmType[]);
+  const [farmPagination, setFarmPagination] = useState<FarmPagination | null>( {} as FarmPagination);
 
-  async function fetchFarm() {
+  async function fetchFarm(page?: number, pageSize?: number) {
     try {
-      const response = await api.get("/farm/");
-      setFarm(response.data);
+      const response = await api.get("/farm/" , { params: { page_size: pageSize || 10 , page: page || 1 } });
+      setFarm(response?.data?.data);
+      setFarmPagination(response?.data?.pagination);
     } catch (error) {
+      setFarm([]);
       console.error("Erro ao buscar dados da API:", error);
     }
   }
@@ -59,7 +63,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <FarmContext.Provider value={{ farm, setFarm, fetchFarm, postFarm , getFarmById, putFarm}}>
+    <FarmContext.Provider value={{ farm, setFarm, fetchFarm, postFarm , getFarmById, putFarm, farmPagination }}>
       {children}
     </FarmContext.Provider>
   );

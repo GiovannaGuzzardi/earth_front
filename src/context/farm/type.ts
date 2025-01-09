@@ -3,10 +3,11 @@ import { Dispatch, SetStateAction } from "react";
 export interface FarmContextType {
     farm: FarmType[];
     setFarm: Dispatch<SetStateAction<FarmType[]>>;
-    fetchFarm: () => Promise<void>;
+    fetchFarm: (page?: number, pageSize?: number) => Promise<void>;
     postFarm: (newFarm: FarmType) => Promise<void>;
     getFarmById: (farmId: string) => Promise<FarmType>;
     putFarm: (newFarm: FarmType) => Promise<void>;
+    farmPagination: FarmPagination | null;
   }
 
 export interface FarmType {
@@ -28,3 +29,11 @@ export interface FarmType {
     wagon_capacity: number;
     tank_capacity: number;
   }
+
+  
+export interface FarmPagination {
+  total_count: number
+  count: number
+  offset: number
+  total_offset: number
+}
