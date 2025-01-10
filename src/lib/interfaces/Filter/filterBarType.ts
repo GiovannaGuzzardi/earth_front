@@ -1,5 +1,4 @@
 "use client";
-import { FarmType } from "@/context/farm/type";
 import {
   CheckboxProps,
   InputProps,

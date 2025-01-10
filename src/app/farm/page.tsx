@@ -2,7 +2,7 @@
 import { Button, Radio, Select } from "antd";
 import { use, useEffect, useState } from "react";
 import "../../styles/globals.css";
-import FilterBar from "@/lib/interfaces/filterbar";
+import FilterBar from "@/lib/interfaces/Filter/filterbar";
 import { useFarmContext } from "@/context/farm";
 import { FarmType } from "@/context/farm/type";
 import {
@@ -21,10 +21,14 @@ export default function farm() {
   const [position, setPosition] = useState<number>(1);
   const [filter, setFilter] = useState({});
   const pageFarm = range(farmPagination?.total_offset);
-  const inputs: { title: string; placeholder: string; typeInput?: "text" | "number" }[] = [
+  const inputs: {
+    title: string;
+    placeholder: string;
+    typeInput?: "text" | "number";
+  }[] = [
     { title: "name", placeholder: "Nome" },
-    {title: "id", placeholder: "Identificador"},
-    {title: "area", placeholder: "Área" , typeInput: "number"},
+    { title: "id", placeholder: "Identificador" },
+    { title: "area", placeholder: "Área", typeInput: "number" },
   ];
 
   const router = useRouter();
@@ -35,7 +39,7 @@ export default function farm() {
 
   useEffect(() => {
     fetchFarm(position, size, filter);
-  }, [size, position,filter]);
+  }, [size, position, filter]);
 
   return (
     <div className="flex h-full w-full">
