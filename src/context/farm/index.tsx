@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { FarmContextType, FarmPagination, FarmType } from "./type";
+import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
 
 const FarmContext = createContext<FarmContextType>({
   farm: [] as FarmType[],
@@ -22,11 +23,28 @@ const FarmContext = createContext<FarmContextType>({
 
 export function FarmWrapper({ children }: { children: React.ReactNode }) {
   const [farm, setFarm] = useState<FarmType[]>([] as FarmType[]);
-  const [farmPagination, setFarmPagination] = useState<FarmPagination | null>( {} as FarmPagination);
-
-  async function fetchFarm(page?: number, pageSize?: number) {
+  const [farmPagination, setFarmPagination] = useState<FarmPagination | null>(
+    {} as FarmPagination
+  );
+  async function fetchFarm(page?: number, pageSize?: number, filter?: {}) {
     try {
-      const response = await api.get("/farm/" , { params: { page_size: pageSize || 10 , page: page || 1 } });
+      if (filter) {
+        // Lista das chaves válidas em FarmType
+        const validKeys: string[] = Object.keys(fieldTranslationsFarmCard); 
+  
+        // Verifica se todas as chaves do filtro são válidas dentro de FarmType
+        const filteredKeys = Object.keys(filter).every((key) => {
+          return validKeys.includes(key); // Verifica se a chave existe em validKeys
+        });
+
+        if (!filteredKeys) {
+          throw new Error(`Chave inválida no filtro de busca:${filter}`);
+        }
+      }
+  
+      const response = await api.get("/farm/", {
+        params: { page_size: pageSize || 10, page: page || 1 , ...filter},
+      });
       setFarm(response?.data?.data);
       setFarmPagination(response?.data?.pagination);
     } catch (error) {
@@ -63,7 +81,17 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <FarmContext.Provider value={{ farm, setFarm, fetchFarm, postFarm , getFarmById, putFarm, farmPagination }}>
+    <FarmContext.Provider
+      value={{
+        farm,
+        setFarm,
+        fetchFarm,
+        postFarm,
+        getFarmById,
+        putFarm,
+        farmPagination,
+      }}
+    >
       {children}
     </FarmContext.Provider>
   );

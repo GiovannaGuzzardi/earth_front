@@ -12,17 +12,19 @@ import {
 import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
 import { range } from "@/lib/utils";
+import { Placeholder } from "phosphor-react";
 
 export default function farm() {
   const [search, setSearch] = useState(false);
   const { fetchFarm, farm, farmPagination } = useFarmContext();
   const [size, setSize] = useState<number>(5);
   const [position, setPosition] = useState<number>(1);
+  const [filter, setFilter] = useState({});
   const pageFarm = range(farmPagination?.total_offset);
-  const inputs = [
-    { placeholder: "Nome" },
-    { placeholder: "Estado" },
-    { placeholder: "Cidade" },
+  const inputs: { title: string; placeholder: string; typeInput?: "text" | "number" }[] = [
+    { title: "name", placeholder: "Nome" },
+    {title: "id", placeholder: "Identificador"},
+    {title: "area", placeholder: "Área" , typeInput: "number"},
   ];
 
   const router = useRouter();
@@ -32,14 +34,14 @@ export default function farm() {
   }, []);
 
   useEffect(() => {
-    fetchFarm(position, size);
-  }, [size, position]);
+    fetchFarm(position, size, filter);
+  }, [size, position,filter]);
 
   return (
     <div className="flex h-full w-full">
       {search && (
         <div className="p-3 pr-0 w-1/4 h-full">
-          <FilterBar inputs={inputs} />
+          <FilterBar inputs={inputs} setFilter={setFilter} filter={filter} />
         </div>
       )}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
@@ -61,10 +63,10 @@ export default function farm() {
         </div>
         <div className="bg-neutral-50 w-auto  rounded-md p-3 flex flex-col items-start justify-start gap-3 flex-grow overflow-auto shadow-xl">
           {farm.length > 0 ? (
-            farm.map((value, index) => {
+            farm?.map((value, index) => {
               return (
                 <div
-                  key={value.id + index}
+                  key={value?.id || "n/a" + index}
                   className="h-fit w-full rounded-md shadow-xl bg-neutral-50 flex items-center rounded-l-full round "
                 >
                   <img
