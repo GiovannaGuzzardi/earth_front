@@ -61,22 +61,12 @@ export default function farm() {
         </div>
       )}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
-        <div className="bg-neutral-50 flex w-full p-2 justify-between items-center rounded-md flex-grow-0 shadow-xl">
-          <h3 className=" text-primary-400 font-semibold">
-            Fazendas Cadastradas
-          </h3>
-          <div className="flex items-center gap-3 flex-grow justify-end">
-            <ModalFarm />
-            <Button
-              type="primary"
-              onClick={() => {
-                search ? setSearch(false) : setSearch(true);
-              }}
-            >
-              Filtrar
-            </Button>
-          </div>
-        </div>
+        <NavTopMain
+          title="Fazenda"
+          search={search}
+          setSearch={setSearch}
+          Component={ModalFarm}
+        />
         <div className="bg-neutral-50 w-auto  rounded-md p-3 flex flex-col items-start justify-start gap-3 flex-grow overflow-auto shadow-xl">
           {farm.length > 0 ? (
             farm?.map((value, index) => {
@@ -187,4 +177,5 @@ import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
 import { range } from "@/lib/util/utils";
 import { Placeholder } from "phosphor-react";
-import { title } from "process";
+import { title } from "process";import NavTopMain from "@/lib/interfaces/navTopMain";
+

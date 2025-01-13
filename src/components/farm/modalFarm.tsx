@@ -1,15 +1,9 @@
 "use client";
-import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
-import { FarmType } from "@/context/farm/type";
-import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
-import { use, useState } from "react";
-import { Field, initialFields, valorDefault } from "./configFarm";
-import { useFarmContext } from "@/context/farm";
-import { useAppContext } from "@/context";
 
-export default function ModalFarm() {
+interface ModalFarmProps {isModalOpen: boolean, setIsModalOpen: (isModalOpen: boolean) => void}
+
+export default function ModalFarm({ isModalOpen, setIsModalOpen }: ModalFarmProps) {
   // Estado do modal e valores do formulário
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [farmValues, setFormValues] = useState<FarmType>(valorDefault);
   const [form] = Form.useForm();
   const { postFarm } = useFarmContext();
@@ -54,10 +48,6 @@ export default function ModalFarm() {
 
   // Renderização do componente
   return (
-    <>
-      <Button type="primary" onClick={showModal}>
-        Adicionar Fazenda
-      </Button>
       <Modal
         title="Criar nova fazenda"
         open={isModalOpen}
@@ -112,6 +102,14 @@ export default function ModalFarm() {
           </div>
         </Form>
       </Modal>
-    </>
   );
 }
+
+import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
+import { FarmType } from "@/context/farm/type";
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
+import { use, useState } from "react";
+import { Field, initialFields, valorDefault } from "./configFarm";
+import { useFarmContext } from "@/context/farm";
+import { useAppContext } from "@/context";
+import React from "react";
