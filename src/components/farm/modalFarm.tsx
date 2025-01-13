@@ -3,17 +3,12 @@
 interface ModalFarmProps {isModalOpen: boolean, setIsModalOpen: (isModalOpen: boolean) => void}
 
 export default function ModalFarm({ isModalOpen, setIsModalOpen }: ModalFarmProps) {
-  // Estado do modal e valores do formulário
   const [farmValues, setFormValues] = useState<FarmType>(valorDefault);
   const [form] = Form.useForm();
   const { postFarm } = useFarmContext();
   const { apiAnt } = useAppContext();
 
-  // Funções para abrir e fechar o modal
-  const showModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
-  // Handle para submeter os dados
   const handleAddFarm = (values: FarmType) => {
     postFarm(values)
       .then(() => {

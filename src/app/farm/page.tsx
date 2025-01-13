@@ -5,39 +5,6 @@ export default function farm() {
   const [size, setSize] = useState<number>(5);
   const [position, setPosition] = useState<number>(1);
   const [filter, setFilter] = useState({});
-  const pageFarm = range(farmPagination?.total_offset);
-
-  const inputs: {
-    title: string;
-    placeholder: string;
-    typeInput?: "text" | "number";
-  }[] = [
-    { title: "name", placeholder: "Nome" },
-    { title: "id", placeholder: "Identificador" },
-    { title: "area", placeholder: "Área", typeInput: "number" },
-  ];
-
-  const select = [
-    {
-      placeholder: "Estado",
-      title: "state",
-      options: [
-        { value: "MG", label: "Minas Gerais" },
-        { value: "SP", label: "São Paulo" },
-        { value: "", label: "Limpar" },
-      ],
-    },
-    {
-      placeholder: "Cidade",
-      title: "city",
-      options: [
-        { value: "uberlandia", label: "Uberlândia" },
-        { value: "Ribeirão Preto", label: "Ribeirão Preto" },
-        { value: "", label: "Limpar" },
-      ],
-    },
-  ];
-
   const router = useRouter();
 
   useEffect(() => {
@@ -53,10 +20,10 @@ export default function farm() {
       {search && (
         <div className="p-3 pr-0 w-1/4 h-full">
           <FilterBar
-            inputs={inputs}
+            inputs={filterOptions.inputs}
             setFilter={setFilter}
             filter={filter}
-            select={select}
+            select={filterOptions.select}
           />
         </div>
       )}
@@ -129,53 +96,31 @@ export default function farm() {
             </div>
           )}
         </div>
-        <div className="bg-neutral-50 flex w-full px-3 py-2 justify-between items-center rounded-md flex-grow-0 shadow-xl">
-          <p className="flex-grow-0">
-            <b className="mr-1 font-semibold text-sm">Total:</b>
-            {farmPagination?.total_count}
-          </p>
-          <div className="flex items-center gap-3 flex-grow justify-end">
-            <p className="flex-grow-0 font-semibold text-sm ">Pagina:</p>
-            <Radio.Group
-              value={position}
-              onChange={(e) => setPosition(e.target.value)}
-            >
-              {pageFarm.map((value, index) => (
-                <Radio.Button key={index} value={value}>
-                  {value}
-                </Radio.Button>
-              ))}
-            </Radio.Group>
-            <p className="flex-grow-0  text-sm font-semibold ">Quantidade:</p>
-            <Select
-              value={size}
-              onChange={(value) => setSize(value)}
-              options={[
-                { value: 1, label: "1" },
-                { value: 10, label: "10" },
-                { value: 15, label: "15" },
-              ]}
-            />
-          </div>
-        </div>
+        <NavButtonMain
+          position={position}
+          setPosition={setPosition}
+          size={size}
+          setSize={setSize}
+        />
       </div>
     </div>
   );
 }
 
-import { Button, Radio, Select } from "antd";
-import { use, useEffect, useState } from "react";
+import { Button } from "antd";
+import { useEffect, useState } from "react";
 import "../../styles/globals.css";
 import FilterBar from "@/lib/interfaces/Filter/filterbar";
 import { useFarmContext } from "@/context/farm";
 import { FarmType } from "@/context/farm/type";
 import {
   fieldTranslationsFarmCard,
+  filterOptions,
   orderedKeysFarmCard,
 } from "../../components/farm/farmutils";
 import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
 import { range } from "@/lib/util/utils";
-import { Placeholder } from "phosphor-react";
-import { title } from "process";import NavTopMain from "@/lib/interfaces/navTopMain";
-
+import NavTopMain from "@/lib/interfaces/navTopMain";
+import { FilterBarProps } from "@/lib/interfaces/Filter/filterBarType";
+import NavButtonMain from "@/lib/interfaces/navButtonMain";
