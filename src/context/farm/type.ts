@@ -8,6 +8,7 @@ export interface FarmContextType {
     getFarmById: (farmId: string) => Promise<FarmType>;
     putFarm: (newFarm: FarmType) => Promise<void>;
     farmPagination: FarmPagination | null;
+    deleteFarm: (farmId: string) => Promise<void>;
   }
 
 export interface FarmType {

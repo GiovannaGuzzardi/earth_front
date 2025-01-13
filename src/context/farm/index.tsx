@@ -19,6 +19,7 @@ const FarmContext = createContext<FarmContextType>({
   getFarmById: async () => ({} as FarmType),
   putFarm: async () => {},
   farmPagination: {} as FarmPagination,
+  deleteFarm: async () =>  {},
 });
 
 export function FarmWrapper({ children }: { children: React.ReactNode }) {
@@ -80,6 +81,15 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
     }
   }
 
+  async function deleteFarm(farmId: string) {
+    try {
+      await api.delete(`/farm/${farmId}`);
+      fetchFarm();
+    } catch (error) {
+      throw error;
+    }
+  }
+
   return (
     <FarmContext.Provider
       value={{
@@ -90,6 +100,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
         getFarmById,
         putFarm,
         farmPagination,
+        deleteFarm,
       }}
     >
       {children}
