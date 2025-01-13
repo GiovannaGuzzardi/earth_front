@@ -52,7 +52,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
       });
 
       const data = response.data;
-      console.log("Token recebido:", data);
+      // console.log("Token recebido:", data);
       sessionStorage.setItem("authToken", JSON.stringify(data));
       setToken(data); // Atualizando o estado com o token recebido
       router.push("/farm"); // Redirecionando para a página inicial após o login

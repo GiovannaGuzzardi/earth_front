@@ -18,14 +18,12 @@ export default function farm() {
   return (
     <div className="flex h-full w-full">
       {search && (
-        <div className="p-3 pr-0 w-1/4 h-full">
           <FilterBar
             inputs={filterOptions.inputs}
             setFilter={setFilter}
             filter={filter}
             select={filterOptions.select}
           />
-        </div>
       )}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
         <NavTopMain
@@ -120,7 +118,5 @@ import {
 } from "../../components/farm/farmutils";
 import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
-import { range } from "@/lib/util/utils";
 import NavTopMain from "@/lib/interfaces/navTopMain";
-import { FilterBarProps } from "@/lib/interfaces/Filter/filterBarType";
 import NavButtonMain from "@/lib/interfaces/navButtonMain";

@@ -11,7 +11,7 @@ export default function FilterBar({
   const [filterBase, setFilterBase] = useState({});
 
   return (
-    <div className="bg-neutral-50 h-full p-3 rounded-md flex flex-col gap-3 m-3 shadow-xl justify-between overflow-auto flex-grow">
+    <div className="bg-neutral-50 p-3 rounded-md flex flex-col gap-3 m-3 mr-0 shadow-xl justify-between overflow-auto flex-grow w-1/4 ">
       <div className="flex flex-col gap-3 ">
         <h3 className=" text-primary-400 font-semibold">Pesquisar</h3>
         {inputs?.map(({ typeInput, title, placeholder }) => {

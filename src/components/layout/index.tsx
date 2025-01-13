@@ -25,7 +25,6 @@ export function Layout() {
   const { token, logout } = useAppContext();
 
   useEffect(() => {
-    console.log("Token:", token);
     if (token) {
       setOptions([
         { name: "Fazendas", link: "/farm" },

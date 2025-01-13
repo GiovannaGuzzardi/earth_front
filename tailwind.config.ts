@@ -49,6 +49,8 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/**/*.{js,ts,jsx,tsx}', // Para projetos com Next.js ou React
+    './components/**/*.{js,ts,jsx,tsx}', // Inclua também onde os filhos estão
   ],
   theme: {
     extend: {
