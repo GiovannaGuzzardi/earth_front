@@ -36,7 +36,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
         const filteredKeys = Object.keys(filter).every((key) => {
           return validKeys.includes(key); // Verifica se a chave existe em validKeys
         });
-
+        console.log(filter);
         if (!filteredKeys) {
           throw new Error(`Chave inválida no filtro de busca:${filter}`);
         }

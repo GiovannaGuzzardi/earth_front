@@ -15,14 +15,20 @@ export default function FilterBar({
       <div className="flex flex-col gap-3 ">
         <h3 className=" text-primary-400 font-semibold">Pesquisar</h3>
         {inputs?.map(({ typeInput, title, placeholder }) => {
-          return renderInput(title,setFilterBase, placeholder, typeInput);
+          return renderInput(title, setFilterBase, placeholder, typeInput);
         })}
 
-        {/* {select?.map((select, index) => (
+        {select?.map((select, index) => (
           <Select
-           key={index + "FilterBarSelect"} {...select} />
+            key={`filter-select-${index}`}
+            onChange={(value) =>
+              handleChange(select.title, setFilterBase, value, null)
+            }
+            placeholder={select.placeholder}
+            {...select}
+          />
         ))}
-        {radio?.map((radio, index) => (
+        {/* {radio?.map((radio, index) => (
           <Radio key={index + "FilterBarRadio"} {...radio} />
         ))}
         {checkbox?.map((checkbox, index) => (
@@ -36,16 +42,8 @@ export default function FilterBar({
   );
 }
 
-import {
-  Button,
-  Checkbox,
-  Input,
-  InputNumber,
-  InputNumberProps,
-  Radio,
-  Select,
-} from "antd";
+import { Button, Select } from "antd";
 import { FilterBarProps } from "./filterBarType";
-import { ChangeEvent, useState } from "react";
-import { ValueType } from "tailwindcss/types/config";
+import { handleChange } from "@/lib/util/utils";
 import { renderInput } from "./render/input";
+import { useState } from "react";

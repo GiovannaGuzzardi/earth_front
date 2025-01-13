@@ -1,19 +1,4 @@
 "use client";
-import { Button, Radio, Select } from "antd";
-import { use, useEffect, useState } from "react";
-import "../../styles/globals.css";
-import FilterBar from "@/lib/interfaces/Filter/filterbar";
-import { useFarmContext } from "@/context/farm";
-import { FarmType } from "@/context/farm/type";
-import {
-  fieldTranslationsFarmCard,
-  orderedKeysFarmCard,
-} from "../../components/farm/farmutils";
-import ModalFarm from "@/components/farm/modalFarm";
-import { useRouter } from "next/navigation";
-import { range } from "@/lib/utils";
-import { Placeholder } from "phosphor-react";
-
 export default function farm() {
   const [search, setSearch] = useState(false);
   const { fetchFarm, farm, farmPagination } = useFarmContext();
@@ -21,6 +6,7 @@ export default function farm() {
   const [position, setPosition] = useState<number>(1);
   const [filter, setFilter] = useState({});
   const pageFarm = range(farmPagination?.total_offset);
+
   const inputs: {
     title: string;
     placeholder: string;
@@ -29,6 +15,27 @@ export default function farm() {
     { title: "name", placeholder: "Nome" },
     { title: "id", placeholder: "Identificador" },
     { title: "area", placeholder: "Área", typeInput: "number" },
+  ];
+
+  const select = [
+    {
+      placeholder: "Estado",
+      title: "state",
+      options: [
+        { value: "MG", label: "Minas Gerais" },
+        { value: "SP", label: "São Paulo" },
+        { value: "", label: "Limpar" },
+      ],
+    },
+    {
+      placeholder: "Cidade",
+      title: "city",
+      options: [
+        { value: "uberlandia", label: "Uberlândia" },
+        { value: "Ribeirão Preto", label: "Ribeirão Preto" },
+        { value: "", label: "Limpar" },
+      ],
+    },
   ];
 
   const router = useRouter();
@@ -45,7 +52,12 @@ export default function farm() {
     <div className="flex h-full w-full">
       {search && (
         <div className="p-3 pr-0 w-1/4 h-full">
-          <FilterBar inputs={inputs} setFilter={setFilter} filter={filter} />
+          <FilterBar
+            inputs={inputs}
+            setFilter={setFilter}
+            filter={filter}
+            select={select}
+          />
         </div>
       )}
       <div className="h-full w-full p-3 flex flex-col gap-3 ">
@@ -160,3 +172,19 @@ export default function farm() {
     </div>
   );
 }
+
+import { Button, Radio, Select } from "antd";
+import { use, useEffect, useState } from "react";
+import "../../styles/globals.css";
+import FilterBar from "@/lib/interfaces/Filter/filterbar";
+import { useFarmContext } from "@/context/farm";
+import { FarmType } from "@/context/farm/type";
+import {
+  fieldTranslationsFarmCard,
+  orderedKeysFarmCard,
+} from "../../components/farm/farmutils";
+import ModalFarm from "@/components/farm/modalFarm";
+import { useRouter } from "next/navigation";
+import { range } from "@/lib/util/utils";
+import { Placeholder } from "phosphor-react";
+import { title } from "process";
