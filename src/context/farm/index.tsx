@@ -10,6 +10,7 @@ import {
 } from "react";
 import { FarmContextType, FarmPagination, FarmType } from "./type";
 import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
+import { useRouter } from "next/navigation";
 
 const FarmContext = createContext<FarmContextType>({
   farm: [] as FarmType[],
@@ -17,7 +18,7 @@ const FarmContext = createContext<FarmContextType>({
   fetchFarm: async () => {},
   postFarm: async () => {},
   getFarmById: async () => ({} as FarmType),
-  putFarm: async () => {},
+  putFarm: async () => false,
   farmPagination: {} as FarmPagination,
   deleteFarm: async () =>  {},
 });
@@ -27,6 +28,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
   const [farmPagination, setFarmPagination] = useState<FarmPagination | null>(
     {} as FarmPagination
   );
+  const router = useRouter();
   async function fetchFarm(page?: number, pageSize?: number, filter?: {}) {
     try {
       if (filter) {
@@ -67,6 +69,7 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
     try {
       await api.put(`/farm/${newFarm.id}`, newFarm);
       fetchFarm();
+      return true;
     } catch (error) {
       throw error;
     }

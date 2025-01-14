@@ -6,6 +6,7 @@ import { Button, Input, Radio, Tooltip } from "antd";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { useAppContext } from "@/context";
 
 export default function FarmDetails({
   params,
@@ -15,10 +16,11 @@ export default function FarmDetails({
   const [farm, setFarm] = useState<FarmType | null>(null);
   const { getFarmById, putFarm } = useFarmContext();
   const [optionInfo, setOptionInfo] = useState(1);
+  const {apiAnt, contextHolder} = useAppContext();
 
   useEffect(() => {
     getFarmById(params.farmId).then((response) => {
-      setFarm(response);
+    setFarm(response);
     });
   }, []);
 
@@ -31,7 +33,19 @@ export default function FarmDetails({
   ];
 
   const savePutFarm = () => {
-    putFarm(farm as FarmType);
+    putFarm(farm as FarmType).then((success) => {
+      if (success) {
+        apiAnt.open({
+          message: "Fazenda atualizada com sucesso!",
+          type: "success",
+        });
+      } else {
+        apiAnt.open({
+          message: "Erro ao atualizar a fazenda!",
+          type: "error",
+        });
+      }
+    });
   };
 
   const router = useRouter();

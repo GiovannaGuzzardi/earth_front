@@ -1,18 +1,9 @@
 "use client";
 
-interface ModalFarmProps {
-  initialFields: Field[];
-  isModalOpen: boolean;
-  setIsModalOpen: (isModalOpen: boolean) => void;
+interface ModalFarmProps {isModalOpen: boolean, setIsModalOpen: (isModalOpen: boolean) => void}
 
-}
-
-export default function ModalFarm({
-  isModalOpen,
-  setIsModalOpen,
-  initialFields,
-}: ModalFarmProps) {
-  const [farmValues, setFormValues] = useState(valorDefault);
+export default function ModalFarm({ isModalOpen, setIsModalOpen }: ModalFarmProps) {
+  const [farmValues, setFormValues] = useState<FarmType>(valorDefault);
   const [form] = Form.useForm();
   const { postFarm } = useFarmContext();
   const { apiAnt } = useAppContext();
@@ -52,60 +43,60 @@ export default function ModalFarm({
 
   // Renderização do componente
   return (
-    <Modal
-      title="Criar nova fazenda"
-      open={isModalOpen}
-      width={"80vw"}
-      footer={null}
-      onCancel={closeModal}
-    >
-      <Form
-        form={form} // Vincula o form à instância criada
-        layout="vertical"
-        className="grid grid-cols-3 gap-x-3"
-        initialValues={farmValues} // Define valores iniciais
-        onFinish={handleAddFarm}
-        onValuesChange={(changedValues, allValues) => {
-          setFormValues(allValues); // Atualiza o estado com os valores mais recentes
-        }}
+      <Modal
+        title="Criar nova fazenda"
+        open={isModalOpen}
+        width={"80vw"}
+        footer={null}
+        onCancel={closeModal}
       >
-        {initialFields.map((field) => (
-          <Form.Item
-            key={field.name}
-            label={fieldTranslationsFarmCard[field.name]}
-            tooltip={field.alert}
-            name={field.name}
-            rules={[
-              { type: field.type },
-              { required: field.required, message: "Campo obrigatório" },
-            ]}
-            style={{ marginBottom: 1 }}
-          >
-            {field.typeInput === "select" ? (
-              <Select>
-                {field.options?.map((option) => (
-                  <Select.Option key={option} value={option}>
-                    {option}
-                  </Select.Option>
-                ))}
-              </Select>
-            ) : field.type === "number" ? (
-              <InputNumber />
-            ) : (
-              <Input />
-            )}
-          </Form.Item>
-        ))}
-        <div className="col-span-2 text-right flex space-x-2 mt-2">
-          <Button key="submit" type="primary" htmlType="submit" size="large">
-            Adicionar fazenda
-          </Button>
-          <Button type="primary" danger onClick={handlecancel} size="large">
-            Cancelar
-          </Button>
-        </div>
-      </Form>
-    </Modal>
+        <Form
+          form={form} // Vincula o form à instância criada
+          layout="vertical"
+          className="grid grid-cols-3 gap-x-3"
+          initialValues={farmValues} // Define valores iniciais
+          onFinish={handleAddFarm}
+          onValuesChange={(changedValues, allValues) => {
+            setFormValues(allValues); // Atualiza o estado com os valores mais recentes
+          }}
+        >
+          {initialFields.map((field) => (
+            <Form.Item
+              key={field.name}
+              label={fieldTranslationsFarmCard[field.name]}
+              tooltip={field.alert}
+              name={field.name}
+              rules={[
+                { type: field.type },
+                { required: field.required, message: "Campo obrigatório" },
+              ]}
+              style={{ marginBottom: 1 }}
+            >
+              {field.typeInput === "select" ? (
+                <Select>
+                  {field.options?.map((option) => (
+                    <Select.Option key={option} value={option}>
+                      {option}
+                    </Select.Option>
+                  ))}
+                </Select>
+              ) : field.type === "number" ? (
+                <InputNumber />
+              ) : (
+                <Input />
+              )}
+            </Form.Item>
+          ))}
+          <div className="col-span-2 text-right flex space-x-2 mt-2">
+            <Button key="submit" type="primary" htmlType="submit" size="large">
+              Adicionar fazenda
+            </Button>
+            <Button type="primary" danger onClick={handlecancel} size="large">
+              Cancelar
+            </Button>
+          </div>
+        </Form>
+      </Modal>
   );
 }
 
@@ -113,8 +104,7 @@ import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
 import { FarmType } from "@/context/farm/type";
 import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 import { use, useState } from "react";
-import { valorDefault } from "./configFarm";
+import { initialFields, valorDefault } from "./configFarm";
 import { useFarmContext } from "@/context/farm";
 import { useAppContext } from "@/context";
-import React from "react";import { Field } from "@/lib/util/utils";
-
+import React from "react";

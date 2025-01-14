@@ -6,7 +6,7 @@ export interface FarmContextType {
     fetchFarm: (page?: number, pageSize?: number, filter?:{}) => Promise<void>;
     postFarm: (newFarm: FarmType) => Promise<void>;
     getFarmById: (farmId: string) => Promise<FarmType>;
-    putFarm: (newFarm: FarmType) => Promise<void>;
+    putFarm: (newFarm: FarmType) => Promise<boolean>;
     farmPagination: FarmPagination | null;
     deleteFarm: (farmId: string) => Promise<void>;
   }
