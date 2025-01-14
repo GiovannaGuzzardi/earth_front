@@ -12,3 +12,13 @@ export const handleChange = (title: string,setFilterBase: Dispatch<SetStateActio
       };
     });
 };
+
+export type Field = {
+  name: string;
+  type?: "string" | "number" | "boolean" | "url" | "email";
+  typeInput?: "text" | "number" | "email" | "password" | "select";
+  required?: boolean;
+  value: string | number | null;
+  alert?: string;
+  options?: string[];
+};

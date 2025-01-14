@@ -1,14 +1,5 @@
 import { FarmType } from "@/context/farm/type";
-
-export type Field = {
-  name: keyof FarmType;
-  type?: "string" | "number" | "boolean" | "url" | "email";
-  typeInput?: "text" | "number" | "email" | "password" | "select";
-  required?: boolean;
-  value: string | number | null;
-  alert?: string;
-  options?: string[];
-};
+import { Field } from "@/lib/util/utils";
 
 export const initialFields: Field[] = [
   { name: "id", type: "string", required: false, value: null, alert: "" },

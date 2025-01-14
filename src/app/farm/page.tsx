@@ -26,6 +26,7 @@ export default function Farm() {
           search={search}
           setSearch={setSearch}
           Component={ModalFarm}
+          inicialFieldsPass={initialFields}
         />
         <div className="bg-neutral-50 w-auto  rounded-md p-3 flex flex-col items-start justify-start gap-3 flex-grow overflow-auto shadow-xl">
           {farm.length > 0 ? (
@@ -73,4 +74,5 @@ import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
 import NavTopMain from "@/lib/interfaces/navTopMain";
 import NavButtonMain from "@/lib/interfaces/navButtonMain";
-import GetComponent from "@/components/getComponent";
+import GetComponent from "@/components/getComponent";import { initialFields } from "@/components/farm/configFarm";
+
