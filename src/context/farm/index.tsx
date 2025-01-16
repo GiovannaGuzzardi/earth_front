@@ -32,16 +32,10 @@ export function FarmWrapper({ children }: { children: React.ReactNode }) {
   async function fetchFarm(page?: number, pageSize?: number, filter?: {}) {
     try {
       if (filter) {
-        // Lista das chaves válidas em FarmType
         const validKeys: string[] = Object.keys(fieldTranslationsFarmCard); 
-  
-        // Verifica se todas as chaves do filtro são válidas dentro de FarmType
-        const filteredKeys = Object.keys(filter).every((key) => {
-          return validKeys.includes(key); // Verifica se a chave existe em validKeys
-        });
-        // console.log(filter);
-        if (!filteredKeys) {
-          throw new Error(`Chave inválida no filtro de busca:${filter}`);
+        const invalidKey = Object.keys(filter).find((key) => !validKeys.includes(key));
+        if (invalidKey) {
+          throw new Error(`Chave inválida no filtro de busca: ${invalidKey}`);
         }
       }
   

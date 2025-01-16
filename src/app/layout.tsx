@@ -3,9 +3,7 @@ import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { Layout } from "@/components/layout";
 import { AppWrapper } from "@/context";
-import { StoreWrapper } from "@/context/store";
 import { ConfigProvider } from "antd";
-import { Height } from "@mui/icons-material";
 import { FarmWrapper } from "@/context/farm";
 import ptBR from 'antd/locale/pt_BR'
 
