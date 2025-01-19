@@ -7,6 +7,11 @@ export default function ModalFarm({ isModalOpen, setIsModalOpen }: ModalFarmProp
   const [form] = Form.useForm();
   const { postFarm } = useFarmContext();
   const { apiAnt } = useAppContext();
+  const {meta} = useMetaContext();
+  
+  useEffect(() => {
+    console.log(meta);
+  } , [meta]);
 
   const closeModal = () => setIsModalOpen(false);
   const handleAddFarm = (values: FarmType) => {
@@ -103,8 +108,9 @@ export default function ModalFarm({ isModalOpen, setIsModalOpen }: ModalFarmProp
 import { fieldTranslationsFarmCard } from "@/components/farm/farmutils";
 import { FarmType } from "@/context/farm/type";
 import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
-import { use, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { initialFields, valorDefault } from "./configFarm";
 import { useFarmContext } from "@/context/farm";
 import { useAppContext } from "@/context";
 import React from "react";
+import { useMetaContext } from "@/context/metadata";

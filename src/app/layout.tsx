@@ -5,7 +5,8 @@ import { Layout } from "@/components/layout";
 import { AppWrapper } from "@/context";
 import { ConfigProvider } from "antd";
 import { FarmWrapper } from "@/context/farm";
-import ptBR from 'antd/locale/pt_BR'
+import ptBR from "antd/locale/pt_BR";
+import { MetaWrapper } from "@/context/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,26 +23,30 @@ export default function RootLayout({
   return (
     <AppWrapper>
       <FarmWrapper>
-        <ConfigProvider
-          locale={ptBR}
-          theme={{
-            components: {
-              Button: {
-                colorPrimary: "#0a8528",
-                algorithm: true, // Enable algorithm
+        <MetaWrapper>
+          <ConfigProvider
+            locale={ptBR}
+            theme={{
+              components: {
+                Button: {
+                  colorPrimary: "#0a8528",
+                  algorithm: true, // Enable algorithm
+                },
               },
-            },
-          }}
-        >
-          <html lang="en">
-            <body className="h-screen w-screen overflow-hidden flex flex-col">
-              <main className="flex-grow flex flex-col max-h-lvh">
-                <Layout />
-                <div className="flex-grow overflow-auto bg-primary-100">{children}</div>
-              </main>
-            </body>
-          </html>
-        </ConfigProvider>
+            }}
+          >
+            <html lang="en">
+              <body className="h-screen w-screen overflow-hidden flex flex-col">
+                <main className="flex-grow flex flex-col max-h-lvh">
+                  <Layout />
+                  <div className="flex-grow overflow-auto bg-primary-100">
+                    {children}
+                  </div>
+                </main>
+              </body>
+            </html>
+          </ConfigProvider>
+        </MetaWrapper>
       </FarmWrapper>
     </AppWrapper>
   );

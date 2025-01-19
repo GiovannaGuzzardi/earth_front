@@ -1,13 +1,15 @@
 "use client";
 export default function Farm() {
   const [search, setSearch] = useState(false);
-  const { fetchFarm, farm , deleteFarm} = useFarmContext();
+  const { fetchFarm, farm, deleteFarm } = useFarmContext();
   const [size, setSize] = useState<number>(5);
   const [position, setPosition] = useState<number>(1);
   const [filter, setFilter] = useState({});
+  const {fetchMeta } = useMetaContext();
 
   useEffect(() => {
     fetchFarm(position, size, filter);
+    fetchMeta("farm");
   }, [size, position, filter]);
 
   return (
@@ -73,5 +75,6 @@ import ModalFarm from "@/components/farm/modalFarm";
 import { useRouter } from "next/navigation";
 import NavTopMain from "@/lib/interfaces/navTopMain";
 import NavButtonMain from "@/lib/interfaces/navButtonMain";
-import GetComponent from "@/components/getComponent";import { initialFields } from "@/components/farm/configFarm";
-
+import GetComponent from "@/components/getComponent";
+import { initialFields } from "@/components/farm/configFarm";
+import { useMetaContext } from "@/context/metadata";

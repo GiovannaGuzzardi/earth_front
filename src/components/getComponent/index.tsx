@@ -35,7 +35,7 @@ export default function GetComponent({
       <div className="grid grid-cols-[repeat(4,_minmax(0,_25%))] items-start justify-start h-full flex-grow gap-3 p-3">
         {entity.length > 0 ? (
           orderedKeysCard.map((key) => (
-            <div key={key} className="flex flex-col w-full">
+            <div key={key + "aaa"} className="flex flex-col w-full">
               <div className="text-sm break-words opacity-90 font-semibold">
                 {fieldTranslationsCard[key]}
               </div>

@@ -31,7 +31,6 @@ export  const orderedKeysFarmCard: (keyof FarmType)[] = [
     "longitude",
     "latitude",
     "average_altitude",
-    
   ];
 
 export const filterOptions: FilterBarProps = {
