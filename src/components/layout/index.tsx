@@ -7,11 +7,14 @@ import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useAppContext } from "@/context";
 import { useRouter } from "next/navigation";
+import QueueIcon from "@mui/icons-material/Queue";
+import { Tooltip } from "antd";
 
 export function Layout() {
   interface NavButton {
     onclick: () => void | undefined;
     icon: JSX.Element;
+    text?: string;
   }
 
   const base = [
@@ -43,8 +46,25 @@ export function Layout() {
   };
 
   const navbuttons: NavButton[] = [
-    { onclick: ()=>{ router.push("/settings") }, icon: <SettingsIcon /> },
-    { onclick: handleClick , icon: <ExitToAppIcon /> },
+    {
+      onclick: () => {
+        router.push("/add");
+      },
+      text: "adicionar",
+      icon: <QueueIcon />,
+    },
+    {
+      onclick: () => {
+        router.push("/settings");
+      },
+      icon: <SettingsIcon />,
+    },
+    {
+      onclick: () => {
+        handleClick();
+      },
+      icon: <ExitToAppIcon />,
+    },
   ];
 
   return (
@@ -76,7 +96,9 @@ export function Layout() {
                   onClick={element.onclick}
                   key={index + "navbutton"}
                 >
-                  {element.icon}
+                  <Tooltip title={element.text}>
+                    {element.icon}
+                  </Tooltip>
                 </button>
               ))}
             </div>

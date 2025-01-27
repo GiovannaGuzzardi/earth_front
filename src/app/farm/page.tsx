@@ -9,7 +9,6 @@ export default function Farm() {
 
   useEffect(() => {
     fetchFarm(position, size, filter);
-    fetchMeta("farm");
   }, [size, position, filter]);
 
   return (

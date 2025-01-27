@@ -3,12 +3,12 @@ import { useContext, useState } from "react";
 import { createContext } from "react";
 import api from "@/api";
 
-interface MetaContextType {
+export interface MetaContextType {
    meta: MetaType[]; 
-   fetchMeta: (title: string) => void;
+   fetchMeta: (title: string) => Promise<MetaType[] | null>;
 }
 
-interface MetaType {
+export interface MetaType {
     id: string;
     name: string;
     description: string;
@@ -20,7 +20,7 @@ interface MetaType {
 
 const MetaContext = createContext<MetaContextType>({
     meta: [] as MetaType[],
-    fetchMeta: async () => {},
+    fetchMeta: async () => [] as MetaType[],
 });
 
 export function MetaWrapper({ children }: { children: React.ReactNode }) {
@@ -29,9 +29,11 @@ export function MetaWrapper({ children }: { children: React.ReactNode }) {
         try {
             const response = await api.get(`/metadata/${table}`);
             setMeta(response?.data);
+            return response?.data;
         } catch (error) {
             setMeta([]);
             console.error("Erro ao buscar dados da API:", error);
+            return null;
         }
     }
 
